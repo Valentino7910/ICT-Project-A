@@ -4,11 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Document</title>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        
+        .navbar {
+            /* 设置 z-index 来保证导航栏位于顶部 */
+            position: relative;
+            z-index: 2;
+        }
+
+        .bg {
+            /* 设置背景图片位置 */
+            position: absolute;
+            top: 60px; /* 与导航栏高度相同 */
+            left: 0;
+            width: 100%;
+            height: calc(100% - 60px); /* 减去导航栏高度 */
+            opacity: 0.7;
+            background-image: url('./bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1; /* 将背景置于导航栏下方 */
+        }
+    </style>
 </head>
 
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"><img src="./logo.png" alt=""></div>
+            <div class="col"></div>
+        </div>
+    </div>
 
+    <nav class="navbar bg-primary navbar-dark navbar-expand-lg">
+        <div class="container">
+            <a href="#" class="navbar-brand">Golden Care</a>
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <div class="nav-link">Management</div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link">Services & Facilities</div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link">Inventory management</div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link">FAQ</div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link">Login</div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="bg"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col mt-3 text-center" style="font-size: 32px; black:white;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                <p>Golden Care is a leading provider of comprehensive software solutions designed specifically for aged care service providers. With a deep understanding of the unique challenges faced by elderly individuals and the caregivers who support them, we are committed to improving the quality of life for seniors while streamlining operations for care providers.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
