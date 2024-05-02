@@ -98,15 +98,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 								<button href="./index.php">Home</button>
 							</a>
 						</div>
-						<div class="dropdown">
-							<a title="Services & Facilities">
-								<button>Services & Facilities</button></a>
-							</a>
-							<div class="dropdown-content services-and-facilities">
-								<a href="./services.php" title="Services » Golden Care">Services</a>
-								<a href="./facilities.php" title="Facilities » Golden Care">Facilities</a>
-
-							</div>
+						<div>
+							<a href="services.php"><button href="./services.php">Services</button></a>
 						</div>
 						<div class="dropdown">
 							<a title="About Us">
@@ -120,6 +113,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						</div>
 						<div class="current-page">
                              <a href="inventory.php"><button href="./inventory.php">Inventory</button></a>
+						</div>
+						<div>
+							<a href="management.php"><button href="./management.php">Management</button></a>
 						</div>
 						<div>
 							<a title="Sign In » Golden Care">

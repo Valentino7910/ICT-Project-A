@@ -10,9 +10,10 @@ $message = ''; // Message to display to the user
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = trim($_POST['username']);
     $password = $_POST['password'];  // Storing password as plain text (not secure)
+    $role = $_POST['role'];  // Capture the role from the form
 
     // Establish a database connection
-
+   // $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName); // Make sure these variables are defined in settings.php
 
     // Check connection
     if ($conn->connect_error) {
@@ -28,8 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = "This username is already taken. Please choose another.";
     } else {
         // Username does not exist, proceed with registration
-        $stmt = $conn->prepare("INSERT INTO member_login (username, password) VALUES (?, ?)");
-        $stmt->bind_param("ss", $username, $password);  // Note: Password is not hashed
+        $stmt = $conn->prepare("INSERT INTO member_login (username, password, permission) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $username, $password, $role);  // Note: Password is not hashed, role is added
 
         if ($stmt->execute()) {
             $message = "User registered successfully! You will be redirected to the login page in 5 seconds...";
@@ -46,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,15 +82,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 								<button href="./index.php">Home</button>
 							</a>
 						</div>
-						<div class="dropdown">
-							<a title="Services & Facilities">
-								<button>Services & Facilities</button></a>
-							</a>
-							<div class="dropdown-content services-and-facilities">
-								<a href="./services.php" title="Services » Golden Care">Services</a>
-								<a href="./facilities.php" title="Facilities » Golden Care">Facilities</a>
-
-							</div>
+						<div>
+							<a href="services.php"><button href="./services.php">Services</button></a>
 						</div>
 						<div class="dropdown">
 							<a title="About Us">
@@ -102,6 +97,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						</div>
 						<div>
                             <a href="inventory.php"><button href="./inventory.php">Inventory</button></a>
+						</div>
+						<div>
+							<a href="management.php"><button href="./management.php">Management</button></a>
 						</div>
 						<div>
 							<a title="Sign In » Golden Care">
@@ -130,6 +128,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <label for="password" class="form-label">Password:</label>
                                 <input type="password" class="form-control" id="password" name="password" required>
                             </div>
+							<div class="mb-3">
+								<label class="form-label">Role:</label>
+								<div class="form-check">
+									<input type="radio" class="form-check-input" id="admin" name="role" value="admin" required>
+									<label for="admin" class="form-check-label">Admin</label>
+								</div>
+								<div class="form-check">
+									<input type="radio" class="form-check-input" id="patient" name="role" value="patient">
+									<label for="patient" class="form-check-label">Patient</label>
+								</div>
+								<div class="form-check">
+									<input type="radio" class="form-check-input" id="doctor" name="role" value="doctor">
+									<label for="doctor" class="form-check-label">Doctor</label>
+								</div>
+							</div>
                             <button type="submit" class="btn btn-primary">Sign Up</button>
                         </form>
                         <?php if ($message): ?>

@@ -1,71 +1,55 @@
-<?php 
-    session_start();
-    require_once("settings.php");
-
-?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="description"
-		content="Welcome to a post about My Hobbies! This digital space is a place for me to share things that have happened in my life.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Welcome to a post about My Hobbies! This digital space is a place for me to share things that have happened in my life.">
 	<title>Contact Us » Golden Care</title>
-	<link rel="stylesheet" href="./style/managementstyle.css">
 	<link type="text/css" rel="stylesheet" href="./style/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 	<div class="page-container contact-us">
 		<header>
 			<div class="header-content-wrapper">
 				<div class="website-title-wrapper">
-					<a class="website-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png"
-							alt="Golden Care"></a>
+					<a class="website-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png" alt="Golden Care"></a>
 				</div>
 				<div class="navigation-wrapper">
 					<nav>
 						<div>
-							<a href="./index.php" title="Home">
-								<button href="./index.php">Home</button>
-							</a>
+						  <a href="./home.html" title="Home">
+							<button href="./home.html">Home</button>
+						  </a>
 						</div>
-						<div>
-							<a href="services.php"><button href="./services.php">Services</button></a>
+						<div class="dropdown">
+						  <a title="Services & Facilities">
+							<button>Services & Facilities</button></a>
+							</a>
+						<div class="dropdown-content services-and-facilities">
+							<a href="./services.html" title="Services » Golden Care">Services</a>
+							<a href="./facilities.html" title="Facilities » Golden Care">Facilities</a>
+							
+						</div>
 						</div>
 						<div class="dropdown current-page">
-							<a title="About Us">
-								<button>About Us</button>
-							</a>
+						  <a title="About Us">
+							<button>About Us</button>
+						  </a>
 							<div class="dropdown-content services-and-facilities">
-								<a href="./about-us.php" title="About Us » Golden Care">About Us</a>
-								<a href="./faq.php" title="FAQ » Golden Care">FAQ</a>
-								<a href="./Staff.php" title="Staff » Golden Care">Staff</a>
+								<a href="./about-us.html" title="About Us » Golden Care">About Us</a>
+								<a href="./faq.html" title="FAQ » Golden Care">FAQ</a>
+								<a href="./Staff.html" title="Staff » Golden Care">Staff</a>
 							</div>
 						</div>
 						<div>
-							<a href="inventory.php"><button href="./inventory.php">Inventory</button></a>
+						  <a title="Sign In » Golden Care">
+							<button>Sign In</button>
+						  </a>
 						</div>
-						<div>
-							<a href="management.php"><button href="./management.php">Management</button></a>
-						</div>
-						<div>
-							<a title="Sign In » Golden Care">
-								<?php if (!empty($_SESSION['username'])): ?>
-								<a href="logout.php" class="nav-link"><button href="./logout.php">Logout</button></a>
-								<?php else: ?>
-								<a href="login.php" class="nav-link"><button href="./login.php">SignIn</button></a>
-								<?php endif; ?>
-							</a>
-						</div>
-						
 					</nav>
 				</div>
 			</div>
@@ -76,24 +60,13 @@
 					<article>
 						<h1 class="no-margin">My Hobbies</h1>
 						<h2>07/03/2024</h2>
-						<p>A few of my favourite hobbies include reading books, watching movies and playing games. My
-							idea of a peaceful Saturday morning involves a book and a hammock (as seen in this photo).
-							Most recently when I went camping, I took this photo while reading The Book of Dust. This is
-							a prequel to one of my favourite book series which I read a while ago and has since been
-							made into a movie! I have yet to watch the movie but its on my list of movies to watch, so I
-							will get around to it one day!</p>
-						<p>I love watching movies but rarely have the time for it after work or university, it’s nice to
-							sit with my cat, Pantheon, and watch a movie as I fall asleep after a long day but
-							unfortunately this is not conductive to finishing the movies. Hence, I have a list of movies
-							that I have to watch, mostly classic ‘must see’ movies, that I simply never got around to
-							watching.</p>
-						<p>If I have more energy at the end of the day, you will often find me at my PC gaming with
-							friends online.</p>
+						<p>A few of my favourite hobbies include reading books, watching movies and playing games. My idea of a peaceful Saturday morning involves a book and a hammock (as seen in this photo).  Most recently when I went camping, I took this photo while reading The Book of Dust. This is a prequel to one of my favourite book series which I read a while ago and has since been made into a movie! I have yet to watch the movie but its on my list of movies to watch, so I will get around to it one day!</p>
+						<p>I love watching movies but rarely have the time for it after work or university, it’s nice to sit with my cat, Pantheon, and watch a movie as I fall asleep after a long day but unfortunately this is not conductive to finishing the movies. Hence, I have a list of movies that I have to watch, mostly classic ‘must see’ movies, that I simply never got around to watching.</p>
+						<p>If I have more energy at the end of the day, you will often find me at my PC gaming with friends online.</p>
 					</article>
 				</div>
 				<div class="main-column-2">
-					<img id="hobbies" class="images" src="./images/hobbies.jpg"
-						alt="Image of someone readings a book in a hammock.">
+					<img id="hobbies" class="images" src="./images/hobbies.jpg" alt="Image of someone readings a book in a hammock.">
 				</div>
 			</div>
 		</main>
@@ -130,8 +103,7 @@
 				<div class="aside-column-2">
 					<section>
 						<h2>Book survey</h2>
-						<form id="book-survey" method="post"
-							action="http://mercury.swin.edu.au/it000000/cos10005/surveytest.php">
+						<form id="book-survey" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/surveytest.php">
 							<table id="book-survey-table">
 								<tr>
 									<th>
@@ -179,8 +151,7 @@
 									<td>
 										<p>
 											<label>The Adventures and the Memoirs of Sherlock Holmes
-												<input type="checkbox"
-													name="The Adventures and the Memoirs of Sherlock Holmes">
+												<input type="checkbox" name="The Adventures and the Memoirs of Sherlock Holmes">
 											</label>
 										</p>
 									</td>
@@ -197,8 +168,8 @@
 								<tr>
 									<td>
 										<p>
-											<input class="submit-button" type="submit" value="Submit">
-											<input class="reset-button" type="reset" value="Reset">
+											<input class="submit-button" type="submit" value="Submit" >
+											<input class="reset-button" type="reset" value="Reset" >
 										</p>
 									</td>
 								</tr>
@@ -214,8 +185,7 @@
 				</div>
 				<div class="footer-bottom-wrapper">
 					<div class="footer-bottom-left-wrapper">
-						<a class="footer-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png"
-								alt="Golden Care"></a>
+						<a class="footer-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png" alt="Golden Care"></a>
 					</div>
 					<div class="footer-bottom-centre-wrapper">
 						<p>123-456-7890</p>
@@ -229,5 +199,4 @@
 		</footer>
 	</div>
 </body>
-
 </html>

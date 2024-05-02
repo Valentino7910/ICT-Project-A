@@ -1,32 +1,31 @@
 <?php 
     session_start();
     require_once("settings.php");
-
+    require_once("auth_session.php");
+    check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<title>Staff</title>
-	<link type="text/css" rel="stylesheet" href="./style/style.css">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Welcome to the home page of Golden Care.">
+	<title>Golden Care</title>
+	
+    <link rel="stylesheet" href="./style/managementstyle.css">
+    <link type="text/css" rel="stylesheet" href="./style/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap"
 		rel="stylesheet">
-	<style>
-
-
-	</style>
-
+    
 </head>
 
-
 <body>
-	<div class="page">
+	<div class="page-container home">
 		<header>
 			<div class="header-content-wrapper">
 				<div class="website-title-wrapper">
@@ -43,7 +42,7 @@
 						<div>
 							<a href="services.php"><button href="./services.php">Services</button></a>
 						</div>
-						<div class="dropdown current-page">
+						<div class="dropdown">
 							<a title="About Us">
 								<button>About Us</button>
 							</a>
@@ -56,7 +55,7 @@
 						<div>
 							<a href="inventory.php"><button href="./inventory.php">Inventory</button></a>
 						</div>
-						<div>
+						<div class="current-page">
 							<a href="management.php"><button href="./management.php">Management</button></a>
 						</div>
 						<div>
@@ -72,121 +71,35 @@
 				</div>
 			</div>
 		</header>
-		<h1>Meet the Team</h1>
+		
+			
+        <div class="management-header">
+                    <h2>Manage anything you want efficiently on this page</h2>
+                    </div>
+                <main>
+                    
+                    <section>
+                    <div class="card">
+                        <img src="https://static.wixstatic.com/media/7992be_a24e13154b554573832878cd22c09500~mv2.jpg/v1/crop/x_44,y_0,w_935,h_1024/fill/w_590,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Inventory.jpg" alt="Inventory">
+                        <h2>Inventory</h2>
+                        <a href="inventory.php"><button href="inventory.php">Edit</button></a>
+                    </div>
+                    <div class="card">
+                        <img src="https://static.wixstatic.com/media/7992be_eadf02d2b17d4872a81df90b9df21d8f~mv2.jpg/v1/crop/x_44,y_0,w_935,h_1024/fill/w_590,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Staff%20management.jpg" alt="Staff Management">
+                        <h2>Staff Management</h2>
+                        <a href="Staff.php"><button href="Staff.php">Edit</button></a>
+                    </div>
+                    <div class="card">
+                        <img src="https://static.wixstatic.com/media/7992be_0c32e56a3dfe44e1a0a89b6acd39c743~mv2.jpg/v1/crop/x_44,y_0,w_935,h_1024/fill/w_590,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Bookings.jpg" alt="Services">
+                        <h2>Services</h2>
+                        <button>Edit</button>
+                    </div>
+                    </section>
+                </main>
 
+				
+		
 
-		<div class="Staff">
-			<div class="column">
-				<div class="ID">
-					<img src="images/Animated Nerd.png" alt="Byron Dallas" style="width: 100%">
-					<div class="container">
-						<h2>Byron Dallas</h2>
-						<p class="role">Administrator</p>
-						<p><button class="button">Contact</button></p>
-
-
-
-
-
-
-					</div>
-
-				</div>
-			</div>
-
-
-			<div class="column">
-				<div class="ID">
-					<img src="images/Male doctor.png" alt="Rick Jones" style="width:100%">
-					<div class="container">
-						<h2>Rick Jones</h2>
-						<p class="role">Doctor</p>
-						<p><button class="button">Contact</button></p>
-
-
-
-					</div>
-
-				</div>
-
-			</div>
-
-			<div class="column">
-				<div class="ID">
-					<img src="images/Receptionist.png" alt="Tess Brown" style="width:100%">
-					<div class="container">
-						<h2>Tess Brown</h2>
-						<p class="role">Front staff</p>
-						<p><button class="button">Contact</button></p>
-
-
-					</div>
-
-
-
-
-
-				</div>
-
-			</div>
-
-			<div class="column">
-				<div class="ID">
-					<img src="images/Caretaker.png" alt="Lisa Rose" style="width:100%">
-					<div class="container"></div>
-					<h2>Lisa Rose</h2>
-					<p class="role">Caretaker</p>
-					<p><button class="button">Contact</button></p>
-
-
-
-
-
-
-				</div>
-
-
-			</div>
-
-
-			<div class="column">
-				<div class="ID">
-					<img src="images/Male caretaker.png" alt="Kevin Nye" style="width:100%">
-					<div class="container"></div>
-					<h2>Kevin Nye</h2>
-					<p class="role">Caretaker</p>
-					<p><button class="button">Contact</button></p>
-
-
-
-
-
-
-
-
-				</div>
-
-			</div>
-
-			<div class="column">
-				<div class="ID">
-					<img src="images/young male caretaker.png" alt="Alex Young" style="width:100%">
-					<div class="container"></div>
-					<h2>Alex Young</h2>
-					<p class="role">Caretaker</p>
-					<p><button class="button">Contact</button></p>
-
-
-
-
-				</div>
-
-
-
-
-			</div>
-
-		</div>
 		<footer>
 			<div class="footer-content-wrapper">
 				<div class="footer-divider">
@@ -206,5 +119,7 @@
 				</div>
 			</div>
 		</footer>
-
+	</div>
 </body>
+
+</html>

@@ -19,6 +19,14 @@ if (isset($_POST["submit"])) {
         $username = $_POST["username"];
         $password = $_POST["password"];
         
+        // Establish a database connection
+        // $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName); // Uncomment and set parameters accordingly
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
         // Check if the username exists in the database
         $query = "SELECT * FROM member_login WHERE username = ?";
         $stmt = $conn->prepare($query);
@@ -29,11 +37,13 @@ if (isset($_POST["submit"])) {
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc();
             $dbPassword = $row["password"];
+            $dbRole = $row["role"]; // Fetching the role
             
             // Verify password
             if ($password === $dbPassword) {
                 // Set session variables
                 $_SESSION["username"] = $username;
+                $_SESSION["role"] = $dbRole; // Setting the role in session
                 $_SESSION["loginstatus"] = "logout";
                 
                 // Redirect to another page (e.g., dashboard.php)
@@ -45,9 +55,12 @@ if (isset($_POST["submit"])) {
         } else {
             $errormsg[] = "Username not found <br>";
         }
+        $stmt->close();
+        $conn->close();
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -83,15 +96,8 @@ if (isset($_POST["submit"])) {
 								<button href="./index.php">Home</button>
 							</a>
 						</div>
-						<div class="dropdown">
-							<a title="Services & Facilities">
-								<button>Services & Facilities</button></a>
-							</a>
-							<div class="dropdown-content services-and-facilities">
-								<a href="./services.php" title="Services » Golden Care">Services</a>
-								<a href="./facilities.php" title="Facilities » Golden Care">Facilities</a>
-
-							</div>
+						<div>
+							<a href="services.php"><button href="./services.php">Services</button></a>
 						</div>
 						<div class="dropdown">
 							<a title="About Us">
@@ -105,6 +111,9 @@ if (isset($_POST["submit"])) {
 						</div>
 						<div>
                             <a href="inventory.php"><button href="./inventory.php">Inventory</button></a>
+						</div>
+						<div>
+							<a href="management.php"><button href="./management.php">Management</button></a>
 						</div>
 						<div>
 							<a title="Sign In » Golden Care">
