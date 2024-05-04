@@ -2,6 +2,7 @@
 session_start();
 require_once("auth_session.php");
 check_login();
+check_admin();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Include your database connection settings
     require_once("settings.php");
@@ -81,6 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
 		href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap"
 		rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="./style/second.css">
 </head>
 
 <body>
@@ -106,7 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 								<button>About Us</button>
 							</a>
 							<div class="dropdown-content services-and-facilities">
-								<a href="./about-us.php" title="About Us » Golden Care">About Us</a>
+								
 								<a href="./faq.php" title="FAQ » Golden Care">FAQ</a>
 								<a href="./Staff.php" title="Staff » Golden Care">Staff</a>
 							</div>
@@ -117,14 +119,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						<div>
 							<a href="management.php"><button href="./management.php">Management</button></a>
 						</div>
-						<div>
-							<a title="Sign In » Golden Care">
-                                <?php if (!empty($_SESSION['username'])): ?>
-                                <a href="logout.php" class="nav-link"><button href="./logout.php">Logout</button></a>
-								<?php else: ?>
-								<a href="login.php" class="nav-link"><button href="./login.php">SignIn</button></a>
-								<?php endif; ?>
-							</a>
+						<div id="signin">
+							<?php if (!empty($_SESSION['username'])): ?>
+								<div class="user-info-dropdown">
+									<button onclick="toggleDropdown()">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?> ▼</button>
+									<ul id="userDropdown" class="dropdown-content" style="display: none;">
+										<li>Role: <span><?php echo htmlspecialchars(ucfirst($_SESSION['role'])); ?></span></li>
+										<li><a href="logout.php">Logout</a></li>
+									</ul>
+								</div>
+							<?php else: ?>
+								<a href="login.php" class="nav-link"><button>Sign In / Up</button></a>
+							<?php endif; ?>
 						</div>
 					</nav>
 				</div>
@@ -180,6 +186,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+	<script src="./js/dropdown.js"></script>
 </body>
 
 </html>
