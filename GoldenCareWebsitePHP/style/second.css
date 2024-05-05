@@ -1,12 +1,29 @@
 .navigation-wrapper {
-    margin: 20px;
-    /* Adds 20px of margin on all sides */
+    display: flex;
+    align-items: center;
+    /* Vertically center all items in the navbar */
+    justify-content: space-between;
+    /* Space out items */
+    padding: 0 20px;
+    /* Add padding on the sides for some spacing */
+}
+
+.navbar,
+#signin {
+    display: flex;
+    align-items: center;
+    /* Align all buttons and links */
 }
 
 #signin .user-info-dropdown {
     position: relative;
     display: inline-block;
     /* Keeps the dropdown button inline */
+}
+
+header {
+    margin: 0;
+    padding-bottom: 20px;
 }
 
 #signin .dropdown-content {
@@ -27,6 +44,10 @@
     /* Aligns perfectly under the button */
     width: 100%;
     /* Matches the width to the button */
+    left: 0;
+    /* Aligns dropdown to the left edge of the button */
+    top: 100%;
+    /* Positions the dropdown right below the button */
 }
 
 #signin .dropdown-content li {
@@ -51,4 +72,38 @@
 #signin .dropdown-content li a:hover {
     background-color: #ddd;
     /* Hover background color */
+}
+
+#signin .user-info-dropdown:hover .dropdown-content {
+    display: block;
+    /* Shows the dropdown when hovering over the button */
+}
+
+.navbar button,
+#signin button {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 8px 15px;
+    margin: 0 5px;
+    /* Add horizontal margin for spacing between buttons */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar button:hover,
+#signin button:hover {
+    background-color: #6ba4be;
+    color: #ffb703;
+    /* Simple hover effect */
+}
+
+#signin button,
+#signin button a {
+    color: white;
+    /* Set text color to white */
+    text-decoration: none;
+    /* Remove underline from links */
+    display: block;
+    /* Ensure the link fills the button for clickable area */
 }

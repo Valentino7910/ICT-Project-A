@@ -5,20 +5,16 @@ body {
 	/* Set dark blue background */
 }
 
-
-
 div.page-container {
 	background-color: #8ecae6;
 	/* Set blue background */
-	padding-top: 20px;
 }
 
 header {
 	display: flex;
 	justify-content: center;
-	margin: 20px 0;
+	margin: 0 0 15px 0;
 	background-color: #023047;
-	overflow: auto;
 }
 
 div.header-content-wrapper {
@@ -216,12 +212,9 @@ div.footer-content-wrapper {
 	}
 }
 
+/* Style header */
 
 /* Style website title */
-.navigation-wrapper {
-	margin-bottom: 40px;
-}
-
 div.website-title-wrapper {
 	align-self: center;
 }
@@ -376,7 +369,7 @@ h1,
 h2,
 h3 {
 	color: #fff;
-	font-family: "Raleway", sans-serif;
+	font-family: "Lora", serif;
 }
 
 p,
@@ -395,10 +388,6 @@ li,
 main p,
 main h1:not(.no-margin) {
 	margin: 0 0 1em 0;
-}
-
-main p:last-of-type {
-	margin: 0;
 }
 
 h1 {
@@ -467,7 +456,45 @@ div.aside-column-2 {
 	width: 50%;
 }
 
+/* My Greatest Achievement */
+.my-greatest-achievement div.aside-column-1 {
+	width: 50%;
+}
 
+.my-greatest-achievement div.aside-column-2 {
+	width: 50%;
+}
+
+/* Style uni timetable */
+#uni-timetable {
+	width: 100%;
+	border-collapse: collapse;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000;
+}
+
+#uni-timetable td,
+#uni-timetable th {
+	padding: 0 5px 0 5px;
+	border-right: 1px solid #000;
+}
+
+#uni-timetable tr:nth-child(4),
+#uni-timetable tr:nth-child(6),
+#uni-timetable tr:nth-child(7) {
+	border-bottom: 1px solid #000;
+}
+
+#uni-timetable th {
+	padding: 0 5px 0 5px;
+	border-bottom: 1px solid #000;
+}
+
+/* Style book survey form */
+#book-survey-table {
+	width: 100%;
+}
 
 /* Style checkbox input */
 input[type=checkbox] {
@@ -650,54 +677,4 @@ html {
 	font-style: italic;
 	width: 100%;
 	font-size: large;
-}
-
-#signin {
-	margin-top: 20px;
-	/* Adds 20px margin above the "Sign In" button, adjust this value as needed */
-	margin-bottom: 20px;
-	/* Consistent space below, if needed */
-	display: flex;
-	/* Ensures flex properties apply, if not already set */
-	justify-content: center;
-	/* Centers the button horizontally if not already centered */
-	width: 100%;
-	/* Ensures it takes full width for consistent margin application */
-}
-
-/* If the button itself needs specific margin adjustments */
-#signin button {
-	margin-top: 10px;
-	/* Adds additional spacing above the button if required */
-	margin-bottom: 10px;
-	/* Ensures space below the button, if other content follows */
-}
-
-#signin .dropdown-content {
-	position: absolute;
-	background-color: #f9f9f9;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
-}
-
-#signin .dropdown-content div {
-	padding: 12px 16px;
-	display: block;
-	/* Ensures that each element is treated as a block and appears on a new line */
-	color: black;
-	text-decoration: none;
-}
-
-#signin .dropdown-content a {
-	display: block;
-	/* Ensures that the logout link is treated as a block and appears on a new line */
-	padding: 12px 16px;
-	color: black;
-	text-decoration: none;
-}
-
-#signin .dropdown-content a:hover {
-	background-color: #f1f1f1;
-	/* Adds a hover effect for the link */
 }

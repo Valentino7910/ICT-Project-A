@@ -27,6 +27,8 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+			z-index: 500;
+			flex-grow: 1;
         }
         .content::before {
             content: '';
@@ -46,6 +48,30 @@
             height: auto;
             z-index: 3;
         }
+		.dropdown {
+			z-index: 1000;  /* High z-index to ensure it appears on top */
+		}
+
+		.dropdown-content {
+			z-index: 1001;
+			color: white;  /* Ensure this is higher than the dropdown toggle */
+		}
+
+		header, .page-container {
+			position: relative;
+			z-index: 600;  /* Lower than the dropdown */
+		}
+		html, body {
+		height: 100%; /* Ensures the minimum height is the full viewport height */
+		margin: 0; /* Removes default margin */
+		padding: 0; /* Removes default padding */
+	}
+		.page-container {
+		min-height: 100%; /* Ensures it at least covers the viewport */
+		display: flex;
+		flex-direction: column; /* Stacks children vertically */
+	}
+
     </style>
 </head>
 

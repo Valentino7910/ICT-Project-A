@@ -19,6 +19,62 @@
 		href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap"
 		rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="./style/second.css">
+	<style>
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* Aligns the items in the center */
+            padding: 10px;
+            gap: 50px;
+            /* Controls the gap between the cards */
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 295px;
+            /* Uniform width for all cards */
+            margin: 10px;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: rgb(202, 235, 251);
+            /* Set the background color */
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container {
+            padding: 16px;
+        }
+		.container p {
+        color: #333; /* Dark gray color for better readability */
+        font-size: 16px; /* Optional: Adjust font size for better readability */
+    }
+        .button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+			margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+		a {
+			text-decoration: none;
+		}
+    </style>
 </head>
 
 <body>
@@ -73,85 +129,34 @@
 			</div>
 		</header>
 		<main>
-			<div class="main-content-wrapper">
-				<div class="main-column-1">
-					<article>
-						<h1 class="no-margin">My Uni-life</h1>
-						<h2>05/03/2024</h2>
-						<p>My uni life has been somewhat unconventional, with a change in degree from biology to IT, and
-							a global pandemic rudely interrupting things midway. I have been fortunate enough to really
-							enjoy my studies! Learning new things and how computer processes work has been fascinating.
-							I especially enjoy the group assignments as shown in the image, some of the team building
-							exercises have been incredibly challenging but entertaining, and its great to hear from my
-							group members on what their different perspectives are.</p>
-					</article>
+		<div class="cards">
+			<div class="card">
+				<img src="https://static.wixstatic.com/media/7992be_56615374de2a4c7b8e7533409880e7d8~mv2.jpg" alt="Consultation">
+				<div class="container">
+					<h4><b>Consultation</b></h4>
+					<p>30 minutes session with our staff for any mental health need</p>
+					<button class="button"><a href="consultation.html">Book Now</a></button>
 				</div>
 			</div>
+			<div class="card">
+				<img src="https://static.wixstatic.com/media/7992be_f036b23331ae4941aa9d99ddbf325e58~mv2.jpg" alt="Home Care">
+				<div class="container">
+					<h4><b>Home Care</b></h4>
+					<p>Context for Home Care services</p>
+					<button class="button"><a href="homecare.html">Book Now</a></button>
+				</div>
+			</div>
+			<div class="card">
+				<img src="https://static.wixstatic.com/media/7992be_02a2ece2b5b74390a54f3dcb4fee0b54~mv2.jpg" alt="Facility">
+				<div class="container">
+					<h4><b>Facility</b></h4>
+					<p>Context for facility services</p>
+					<button class="button"><a href="facility.html">Book Now</a></button>
+				</div>
+			</div>
+		</div>
 		</main>
-		<aside>
-			<div class="aside-content-wrapper">
-				<div class="aside-column-1">
-					<img id="unilife" class="images" src="./images/unilife.jpg"
-						alt="Image of a tower of spaghetti with people in the background.">
-				</div>
-				<div class="aside-column-2">
-					<section>
-						<h3>My semester 1 timetable</h3>
-						<table id="uni-timetable">
-							<tr>
-								<th>Day</th>
-								<th>Time</th>
-								<th>Subject</th>
-							</tr>
-							<tr>
-								<td>Mon</td>
-								<td>8:30AM - 9:30AM</td>
-								<td>ICT30017 - Lecture</td>
-							</tr>
-							<tr>
-								<td>Mon</td>
-								<td>9:30AM - 10:30AM</td>
-								<td>COS10005 - Lecture</td>
-							</tr>
-							<tr>
-								<td>Mon</td>
-								<td>4:30PM - 6:30PM</td>
-								<td>ICT30017 - Tute</td>
-							</tr>
-							<tr>
-								<td>Wed</td>
-								<td>8:30AM - 10:30AM</td>
-								<td>COS10005 - Tute</td>
-							</tr>
-							<tr>
-								<td>Wed</td>
-								<td>12:30PM - 2:30PM</td>
-								<td>COS10004 - Tute</td>
-							</tr>
-							<tr>
-								<td>Fri</td>
-								<td>4:30PM - 6:30PM</td>
-								<td>COS10004 - Lecture</td>
-							</tr>
-						</table>
-						<hr>
-						<p>Sometimes you get unlucky with your timetable. I try to make do with what I've got. Below is
-							a step-by-step of what my Wednesday morning usually looks like.</p>
-						<ol>
-							<li>7:30AM wake up</li>
-							<li>7:40AM shower and get dressed</li>
-							<li>7:50AM have breakfast</li>
-							<li>8:00AM leave for uni</li>
-							<li>8:30AM first uni class</li>
-							<li>10:30AM go home and finish uni lab work</li>
-							<li>12:00PM leave for uni</li>
-							<li>12:30PM second uni class</li>
-							<li>2:30PM go home for lunch</li>
-						</ol>
-					</section>
-				</div>
-			</div>
-		</aside>
+		
 		<footer>
 			<div class="footer-content-wrapper">
 				<div class="footer-divider">
