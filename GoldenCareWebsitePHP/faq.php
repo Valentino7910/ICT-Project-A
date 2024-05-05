@@ -62,7 +62,7 @@
 								<div class="user-info-dropdown">
 									<button onclick="toggleDropdown()">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?> ▼</button>
 									<ul id="userDropdown" class="dropdown-content" style="display: none;">
-										<li>Role: <span><?php echo htmlspecialchars(ucfirst($_SESSION['role'])); ?></span></li>
+										<!--<li>Role: <span><?php echo htmlspecialchars(ucfirst($_SESSION['role'])); ?></span></li>-->
 										<li><a href="logout.php">Logout</a></li>
 									</ul>
 								</div>

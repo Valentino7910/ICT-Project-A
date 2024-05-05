@@ -2,59 +2,43 @@
 session_start();
 require_once("settings.php"); // Include your database connection settings
 
-$errormsg = [];
+if (!isset($_SESSION['reset_username'])) {
+    // If there's no username in session redirect back to login or forgot password page
+    header("Location: login.php");
+    exit();
+}
 
-if (isset($_POST["submit"])) {
-    // Validate the user input
-    if (empty($_POST["username"])) {
-        $errormsg[] = "Username cannot be empty <br>";
-    }
+$errorMessage = "";
+$successMessage = "";
 
-    if (empty($_POST["password"])) {
-        $errormsg[] = "Password cannot be empty <br>";
-    }
+if (isset($_POST['submitPassword'])) {
+    $newPassword = $_POST['newPassword'];
+    $confirmPassword = $_POST['confirmPassword'];
 
-    if (empty($errormsg)) {
-        // Sanitize input
-        $username = $_POST["username"];
-        $password = $_POST["password"];
-        
+    if ($newPassword !== $confirmPassword) {
+        $errorMessage = "Passwords do not match.";
+    } else {
         // Establish a database connection
-        // $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName); // Uncomment and set parameters accordingly
-
-        // Check connection
+        
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
 
-        // Check if the username exists in the database
-        $query = "SELECT * FROM member_login WHERE username = ?";
-        $stmt = $conn->prepare($query);
-        $stmt->bind_param("s", $username);
-        $stmt->execute();
-        $result = $stmt->get_result();
+        // Update the user's password
+        $stmt = $conn->prepare("UPDATE member_login SET password = ? WHERE username = ?");
+        $stmt->bind_param("ss", $newPassword, $_SESSION['reset_username']); // Consider hashing the password
+
+        if ($stmt->execute()) {
+            $successMessage = "Password successfully updated.";
+            unset($_SESSION['reset_username']); // Clear the session
         
-        if ($result->num_rows == 1) {
-            $row = $result->fetch_assoc();
-            $dbPassword = $row["password"];
-            $dbRole = $row["permission"]; // Fetching the role
-            
-            // Verify password
-            if ($password === $dbPassword) {
-                // Set session variables
-                $_SESSION["username"] = $username;
-                $_SESSION["role"] = $dbRole; // Setting the role in session
-                $_SESSION["loginstatus"] = "logout";
-                
-                // Redirect to another page (e.g., dashboard.php)
-                header("Location: index.php");
-                exit();
-            } else {
-                $errormsg[] = "Incorrect password <br>";
-            }
+            // Prepare JavaScript for a timed redirect
+            $redirectScript = "<script>setTimeout(function() { window.location.href = 'login.php'; }, 5000);</script>";
         } else {
-            $errormsg[] = "Username not found <br>";
+            $errorMessage = "Error updating password: " . $stmt->error;
         }
+        
+
         $stmt->close();
         $conn->close();
     }
@@ -69,6 +53,10 @@ if (isset($_POST["submit"])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="description" content="Welcome to the home page of Golden Care.">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
 	<title>Golden Care</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -80,8 +68,19 @@ if (isset($_POST["submit"])) {
 		href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap"
 		rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="./style/second.css">
-</head>
+    <style>
+        .form-group {
+    margin-bottom: 15px;  /* Adds space below each form group */
+}
 
+input[type="text"], input[type="password"] {
+    width: 100%;         /* Ensures inputs take up the full width of their container */
+    padding: 8px;        /* Adds padding inside the input fields for better readability */
+    box-sizing: border-box; /* Ensures padding does not affect the overall width */
+}
+
+    </style>
+</head>
 <body>
 	<div class="page-container home">
 		<header>
@@ -136,42 +135,28 @@ if (isset($_POST["submit"])) {
 		<main>
 			<div class="main-content-wrapper">
 				<div class="main-column-1">
-                    <div class="container center">
-                        <h1 class="text-center">Sign In</h1>
-                        <form method="post" action="login.php" class="mt-4">
+                    <div>
+                        <h2>Reset Your Password</h2>
+                        <?php if ($errorMessage) echo "<p style='color:red;'>$errorMessage</p>"; ?>
+                        <?php if (!empty($successMessage)): ?>
+                            <p style='color:green;'><?php echo $successMessage; ?></p>
+                            <?php echo $redirectScript; // This prints the <script> tag for redirection ?>
+                        <?php endif; ?>
+                        <form action="reset_password.php" method="post">
                             <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" id="username" name="username"
-                                    value="<?php echo isset($_POST['username']) ? htmlspecialchars($_POST['username']) : ''; ?>">
+                                <label for="newPassword">New Password:</label>
+                                <input type="password" id="newPassword" name="newPassword" required>
                             </div>
                             <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" name="password">
+                                <label for="confirmPassword">Confirm New Password:</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required>
                             </div>
-                            <button type="submit" class="btn btn-primary" name="submit">Login</button>
-                            <button type="reset" class="btn btn-secondary">Clear</button>
-							<a href="forgot_password.php" class="btn btn-link">Forgot Password?</a>
+                            <div class="form-group">
+                                <button type="submit" name="submitPassword" class="btn btn-primary">Update Password</button>
+                            </div>
                         </form>
-                        <?php
-                            // Show error messages
-                            if (!empty($errormsg)) {
-                                echo "<div class='alert alert-danger mt-4' role='alert'>";
-                                echo "<h4 class='alert-heading'>Please correct the following errors:</h4>";
-                                echo "<ul>";
-                                foreach ($errormsg as $message) {
-                                    echo "<li>$message</li>";
-                                }
-                                echo "</ul>";
-                                echo "</div>";
-                            }
-                            ?>
-                        <div class="mt-4 text-center">
-                            <a href="index.php" class="btn btn-primary ml-2">Home</a>
-                    
-                            <a href="signup.php" class="btn btn-primary">Sign Up</a>
-                        </div>
                     </div>
-                    </div>
+                   
 				</div>
 			</div>
 		</main>
