@@ -216,7 +216,6 @@ div.footer-content-wrapper {
 	}
 }
 
-/* Style header */
 
 /* Style website title */
 .navigation-wrapper {
@@ -468,45 +467,7 @@ div.aside-column-2 {
 	width: 50%;
 }
 
-/* My Greatest Achievement */
-.my-greatest-achievement div.aside-column-1 {
-	width: 50%;
-}
 
-.my-greatest-achievement div.aside-column-2 {
-	width: 50%;
-}
-
-/* Style uni timetable */
-#uni-timetable {
-	width: 100%;
-	border-collapse: collapse;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #000;
-}
-
-#uni-timetable td,
-#uni-timetable th {
-	padding: 0 5px 0 5px;
-	border-right: 1px solid #000;
-}
-
-#uni-timetable tr:nth-child(4),
-#uni-timetable tr:nth-child(6),
-#uni-timetable tr:nth-child(7) {
-	border-bottom: 1px solid #000;
-}
-
-#uni-timetable th {
-	padding: 0 5px 0 5px;
-	border-bottom: 1px solid #000;
-}
-
-/* Style book survey form */
-#book-survey-table {
-	width: 100%;
-}
 
 /* Style checkbox input */
 input[type=checkbox] {

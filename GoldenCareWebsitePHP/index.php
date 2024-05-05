@@ -3,22 +3,50 @@
     require_once("settings.php");
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="description" content="Welcome to the home page of Golden Care.">
-	<title>Golden Care</title>
-	<link type="text/css" rel="stylesheet" href="./style/style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap"
-		rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="./style/second.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Welcome to the home page of Golden Care.">
+    <title>Golden Care</title>
+    <link type="text/css" rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./style/second.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .content {
+            position: relative;
+            color: white;
+            padding: 40px 0;
+            background-image: url('bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+        .container, .row, .col-md-6 {
+            padding: 10px; /* Uniform padding for simplicity */
+        }
+        video, iframe {
+            width: 100%;
+            height: auto;
+            z-index: 3;
+        }
+    </style>
 </head>
 
 <body>
@@ -76,25 +104,20 @@
 				</div>
 			</div>
 		</header>
-		<main>
-			<div class="main-content-wrapper">
-				<div class="main-column-1">
-					<p>
-						Golden Care is a leading provider of comprehensive software solutions designed specifically for
-						aged care service providers. With a deep understanding of the unique challenges faced by elderly
-						individuals and the caregivers who support them, we are committed to improving the quality of
-						life for seniors while streamlining operations for care providers.</p>
-					<p>
-						<a href="https://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3&uri=https%3A%2F%2Ffiledn.eu%2FlbqCW257GRj043bNgoWd8QS%2Fhome.html"
-							target="_blank" rel="noopener noreferrer">
-							<img style="border:0;width:88px;height:31px"
-								src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!">
-						</a>
-					</p>
-				</div>
-				
-			</div>
-		</main>
+		<div class="content">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <iframe src="https://streamable.com/e/nsokfi?autoplay=1&nocontrols=1" frameborder="0" allow="autoplay; fullscreen" style="width:100%; height:300px;"></iframe>
+                    </div>
+                    <div class="col-md-6">
+                        <h1>Golden Care is a leading provider of comprehensive software solutions</h1>
+                        <p>Designed specifically for aged care service providers. With a deep understanding of the unique challenges faced by elderly individuals and the caregivers who support them, we are committed to improving the quality of life for seniors while streamlining operations for care providers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 		<footer>
 			<div class="footer-content-wrapper">
 				<div class="footer-divider">
@@ -116,6 +139,11 @@
 		</footer>
 	</div>
 	<script src="./js/dropdown.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
