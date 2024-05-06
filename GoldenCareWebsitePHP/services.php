@@ -15,9 +15,7 @@
 	<link type="text/css" rel="stylesheet" href="./style/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="./style/second.css">
 	<style>
         .cards {
@@ -99,8 +97,8 @@
 							<a title="About Us">
 								<button>About Us</button>
 							</a>
-							<div class="dropdown-content services-and-facilities">
-							
+							<div class="dropdown-content about-us">
+								<a href="./about-us.php" title="About Us » Golden Care">About Us</a>
 								<a href="./faq.php" title="FAQ » Golden Care">FAQ</a>
 								<a href="./Staff.php" title="Staff » Golden Care">Staff</a>
 							</div>

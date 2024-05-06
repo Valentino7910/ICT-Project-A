@@ -69,16 +69,12 @@ if (isset($_POST["submit"])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="description" content="Welcome to the home page of Golden Care.">
-	<title>Golden Care</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<title>Login » Golden Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link type="text/css" rel="stylesheet" href="./style/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-        
-		href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="./style/second.css">
 </head>
 
@@ -98,23 +94,29 @@ if (isset($_POST["submit"])) {
 							</a>
 						</div>
 						<div>
-							<a href="services.php"><button href="./services.php">Services</button></a>
+							<a href="services.php" title="Services » Golden Care">
+								<button href="./services.php">Services</button>
+							</a>
 						</div>
 						<div class="dropdown">
 							<a title="About Us">
 								<button>About Us</button>
 							</a>
-							<div class="dropdown-content services-and-facilities">
-							
+							<div class="dropdown-content about-us">
+								<a href="./about-us.php" title="About Us » Golden Care">About Us</a>
 								<a href="./faq.php" title="FAQ » Golden Care">FAQ</a>
 								<a href="./Staff.php" title="Staff » Golden Care">Staff</a>
 							</div>
 						</div>
 						<div>
-                            <a href="inventory.php"><button href="./inventory.php">Inventory</button></a>
+                            <a href="inventory.php" title="Inventory » Golden Care">
+                            	<button href="./inventory.php">Inventory</button>
+                            </a>
 						</div>
 						<div>
-							<a href="management.php"><button href="./management.php">Management</button></a>
+							<a href="management.php" title="Management » Golden Care">
+								<button href="./management.php">Management</button>
+							</a>
 						</div>
 						<div id="signin">
 							<?php if (!empty($_SESSION['username'])): ?>

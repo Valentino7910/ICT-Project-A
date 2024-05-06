@@ -15,7 +15,7 @@
     <link type="text/css" rel="stylesheet" href="./style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./style/second.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -71,7 +71,9 @@
 		display: flex;
 		flex-direction: column; /* Stacks children vertically */
 	}
-
+	a {
+		color: #fff !important;
+	}
     </style>
 </head>
 
@@ -91,22 +93,29 @@
 							</a>
 						</div>
 						<div>
-							<a href="services.php"><button href="./services.php">Services</button></a>
+							<a href="services.php" title="Services » Golden Care">
+								<button href="./services.php">Services</button>
+							</a>
 						</div>
 						<div class="dropdown">
 							<a title="About Us">
 								<button>About Us</button>
 							</a>
-							<div class="dropdown-content services-and-facilities">
+							<div class="dropdown-content about-us">
+								<a href="./about-us.php" title="About Us » Golden Care">About Us</a>
 								<a href="./faq.php" title="FAQ » Golden Care">FAQ</a>
 								<a href="./Staff.php" title="Staff » Golden Care">Staff</a>
 							</div>
 						</div>
 						<div>
-							<a href="inventory.php"><button href="./inventory.php">Inventory</button></a>
+							<a href="inventory.php">
+								<button href="./inventory.php">Inventory</button>
+							</a>
 						</div>
 						<div>
-							<a href="management.php"><button href="./management.php">Management</button></a>
+							<a href="management.php">
+								<button href="./management.php">Management</button>
+							</a>
 						</div>
 						<div id="signin">
 							<?php if (!empty($_SESSION['username'])): ?>
@@ -121,11 +130,6 @@
 								<a href="login.php" class="nav-link"><button>Sign In / Up</button></a>
 							<?php endif; ?>
 						</div>
-
-
-
-
-
 					</nav>
 				</div>
 			</div>

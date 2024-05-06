@@ -5,60 +5,54 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<title>Staff</title>
+		<title>Staff » Golden Care</title>
 		<link type="text/css" rel="stylesheet" href="./style/style.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap"
-			rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="./style/second.css">
-		<style>
-
-
-		</style>
-
 	</head>
-
-
 	<body>
-		<div class="page">
+		<div class="page-container Staff">
 			<header>
 				<div class="header-content-wrapper">
 					<div class="website-title-wrapper">
-						<a class="website-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png"
-								alt="Golden Care"></a>
+						<a class="website-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png" alt="Golden Care"></a>
 					</div>
 					<div class="navigation-wrapper">
 						<nav>
 							<div>
-								<a href="./index.php" title="Home">
+								<a href="index.php" title="Home">
 									<button href="./index.php">Home</button>
 								</a>
 							</div>
 							<div>
-								<a href="services.php"><button href="./services.php">Services</button></a>
+								<a href="services.php">
+									<button href="./services.php">Services</button>
+								</a>
 							</div>
 							<div class="dropdown current-page">
 								<a title="About Us">
 									<button>About Us</button>
 								</a>
-								<div class="dropdown-content services-and-facilities">
-								
+								<div class="dropdown-content about-us">
+									<a href="./about-us.php" title="About Us » Golden Care">About Us</a>
 									<a href="./faq.php" title="FAQ » Golden Care">FAQ</a>
-									<a href="./Staff.php" title="Staff » Golden Care">Staff</a>
+									<a class="current-page" href="./Staff.php" title="Staff » Golden Care">Staff</a>
 								</div>
 							</div>
 							<div>
-								<a href="inventory.php"><button href="./inventory.php">Inventory</button></a>
+								<a href="inventory.php">
+									<button href="./inventory.php">Inventory</button>
+								</a>
 							</div>
 							<div>
-								<a href="management.php"><button href="./management.php">Management</button></a>
+								<a href="management.php">
+									<button href="./management.php">Management</button>
+								</a>
 							</div>
 							<div id="signin">
 							<?php if (!empty($_SESSION['username'])): ?>
