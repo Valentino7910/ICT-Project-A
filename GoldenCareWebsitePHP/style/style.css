@@ -77,6 +77,9 @@ div.footer-content-wrapper {
 	div.footer-content-wrapper {
 		width: 1200px;
 	}
+	.faq aside section {
+		padding: 0 15vw 0 15vw;
+	}
 }
 
 @media screen and (min-width: 1500px) {
@@ -221,6 +224,7 @@ div.website-title-wrapper {
 
 a.website-title img {
 	width: 20em;
+	vertical-align: revert;
 }
 
 /* Style the top navigation bar */
@@ -248,6 +252,7 @@ nav div:not(.dropdown-content) {
 
 nav div:not(.dropdown-content) a {
 	width: 100%;
+	text-decoration: none;
 }
 
 nav div:not(.dropdown-content) button {
@@ -333,14 +338,18 @@ div.dropdown-content a {
 }
 
 div.dropdown-content a:hover {
-	color: #ffb703;
+	color: #ffb703 !important;
 	/* Golden text color */
 }
 
-nav div:hover div.dropdown-content.services-and-facilities {
+nav div:hover div.dropdown-content.about-us {
 	display: flex;
 	flex-direction: column;
 	row-gap: 15px;
+}
+
+div.dropdown-content a.current-page {
+	color:#fb8500;
 }
 
 /* Style main content */
@@ -385,8 +394,7 @@ li,
 	font-style: normal;
 }
 
-main p,
-main h1:not(.no-margin) {
+main p, main h1:not(.no-margin), aside p, aside h1:not(.no-margin) {
 	margin: 0 0 1em 0;
 }
 
@@ -395,7 +403,6 @@ h1 {
 	margin: 0;
 	font-weight: bold;
 	font-style: normal;
-	text-align: center;
 }
 
 h2 {
@@ -432,8 +439,7 @@ aside ul {
 }
 
 /* Style aside columns */
-div.aside-column-1,
-div.aside-column-2 {
+div.aside-content-wrapper div {
 	background-color: #219ebc;
 	padding: 15px;
 }
@@ -447,8 +453,8 @@ div.aside-column-2 {
 	width: 60%;
 }
 
-/* Contact Us */
-.contact-us div.aside-column-1 {
+/* About Us */
+.about-us div.aside-column-1 {
 	width: 50%;
 }
 
@@ -456,13 +462,14 @@ div.aside-column-2 {
 	width: 50%;
 }
 
-/* My Greatest Achievement */
-.my-greatest-achievement div.aside-column-1 {
-	width: 50%;
+/* FAQ */
+.faq div.aside-content-wrapper {
+	flex-direction: column;
+	row-gap: 15px;
 }
 
-.my-greatest-achievement div.aside-column-2 {
-	width: 50%;
+.faq div.aside-content-wrapper div {
+	width: auto !important;
 }
 
 /* Style uni timetable */

@@ -8,8 +8,7 @@
     /* Add padding on the sides for some spacing */
 }
 
-.navbar,
-#signin {
+.navbar, #signin {
     display: flex;
     align-items: center;
     /* Align all buttons and links */
@@ -22,8 +21,12 @@
 }
 
 header {
-    margin: 0;
     padding-bottom: 20px;
+}
+
+.home header {
+	margin: 0;
+	line-height: normal;
 }
 
 #signin .dropdown-content {
@@ -68,8 +71,7 @@ header {
     /* No underline */
 }
 
-#signin .dropdown-content li:hover,
-#signin .dropdown-content li a:hover {
+#signin .dropdown-content li:hover, #signin .dropdown-content li a:hover {
     background-color: #ddd;
     /* Hover background color */
 }
@@ -79,31 +81,8 @@ header {
     /* Shows the dropdown when hovering over the button */
 }
 
-.navbar button,
-#signin button {
-    background: none;
-    border: none;
-    color: inherit;
-    padding: 8px 15px;
-    margin: 0 5px;
-    /* Add horizontal margin for spacing between buttons */
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.navbar button:hover,
-#signin button:hover {
+.navbar button:hover, #signin button:hover {
     background-color: #6ba4be;
     color: #ffb703;
     /* Simple hover effect */
-}
-
-#signin button,
-#signin button a {
-    color: white;
-    /* Set text color to white */
-    text-decoration: none;
-    /* Remove underline from links */
-    display: block;
-    /* Ensure the link fills the button for clickable area */
 }
