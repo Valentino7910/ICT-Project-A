@@ -18,6 +18,10 @@
 	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="./style/second.css">
 	<style>
+        main {
+        	background-color: unset;
+        }
+
         .cards {
             display: flex;
             flex-wrap: wrap;
@@ -37,7 +41,7 @@
             font-family: 'Arial', sans-serif;
             border-radius: 10px;
             overflow: hidden;
-            background-color: rgb(202, 235, 251);
+            background-color: #219ebc;
             /* Set the background color */
         }
 
@@ -49,16 +53,18 @@
         .container {
             padding: 16px;
         }
+
 		.container p {
-        color: #333; /* Dark gray color for better readability */
+        color: #fff; /* Dark gray color for better readability */
         font-size: 16px; /* Optional: Adjust font size for better readability */
-    }
+    	}
+
         .button {
             border: none;
             outline: 0;
             padding: 12px;
             color: white;
-            background-color: #000;
+            background-color: #fb8500;
             text-align: center;
             cursor: pointer;
             width: 100%;
@@ -69,6 +75,7 @@
         .button:hover {
             background-color: #555;
         }
+
 		a {
 			text-decoration: none;
 		}
@@ -76,7 +83,7 @@
 </head>
 
 <body>
-	<div class="page">
+	<div class="page-container services">
 		<header>
 			<div class="header-content-wrapper">
 				<div class="website-title-wrapper">
@@ -131,15 +138,15 @@
 			<div class="card">
 				<img src="https://static.wixstatic.com/media/7992be_56615374de2a4c7b8e7533409880e7d8~mv2.jpg" alt="Consultation">
 				<div class="container">
-					<h4><b>Consultation</b></h4>
-					<p>30 minutes session with our staff for any mental health need</p>
+					<p><strong>Consultation</strong></p>
+					<p>30 minutes session with our staff</p>
 					<button class="button"><a href="consultation.html">Book Now</a></button>
 				</div>
 			</div>
 			<div class="card">
 				<img src="https://static.wixstatic.com/media/7992be_f036b23331ae4941aa9d99ddbf325e58~mv2.jpg" alt="Home Care">
 				<div class="container">
-					<h4><b>Home Care</b></h4>
+					<p><strong>Home Care</strong></p>
 					<p>Context for Home Care services</p>
 					<button class="button"><a href="homecare.html">Book Now</a></button>
 				</div>
@@ -147,7 +154,7 @@
 			<div class="card">
 				<img src="https://static.wixstatic.com/media/7992be_02a2ece2b5b74390a54f3dcb4fee0b54~mv2.jpg" alt="Facility">
 				<div class="container">
-					<h4><b>Facility</b></h4>
+					<p><strong>Facility</strong></p>
 					<p>Context for facility services</p>
 					<button class="button"><a href="facility.html">Book Now</a></button>
 				</div>

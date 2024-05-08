@@ -1,0 +1,99 @@
+[06-May-2024 01:35:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /home/y8q8w74i/public_html/tutoring/lucie/settings.php:6
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/settings.php(6): mysqli->__construct()
+#1 /home/y8q8w74i/public_html/tutoring/lucie/index.php(3): require_once('/home/y8q8w74i/...')
+#2 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/settings.php on line 6
+[06-May-2024 01:35:08 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /home/y8q8w74i/public_html/tutoring/lucie/settings.php:6
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/settings.php(6): mysqli->__construct()
+#1 /home/y8q8w74i/public_html/tutoring/lucie/index.php(3): require_once('/home/y8q8w74i/...')
+#2 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/settings.php on line 6
+[06-May-2024 01:35:09 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /home/y8q8w74i/public_html/tutoring/lucie/settings.php:6
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/settings.php(6): mysqli->__construct()
+#1 /home/y8q8w74i/public_html/tutoring/lucie/index.php(3): require_once('/home/y8q8w74i/...')
+#2 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/settings.php on line 6
+[06-May-2024 01:35:10 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /home/y8q8w74i/public_html/tutoring/lucie/settings.php:6
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/settings.php(6): mysqli->__construct()
+#1 /home/y8q8w74i/public_html/tutoring/lucie/index.php(3): require_once('/home/y8q8w74i/...')
+#2 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/settings.php on line 6
+[06-May-2024 01:35:14 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /home/y8q8w74i/public_html/tutoring/lucie/settings.php:6
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/settings.php(6): mysqli->__construct()
+#1 /home/y8q8w74i/public_html/tutoring/lucie/index.php(3): require_once('/home/y8q8w74i/...')
+#2 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/settings.php on line 6
+[06-May-2024 01:35:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /home/y8q8w74i/public_html/tutoring/lucie/settings.php:6
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/settings.php(6): mysqli->__construct()
+#1 /home/y8q8w74i/public_html/tutoring/lucie/index.php(3): require_once('/home/y8q8w74i/...')
+#2 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/settings.php on line 6
+[06-May-2024 01:35:16 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /home/y8q8w74i/public_html/tutoring/lucie/settings.php:6
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/settings.php(6): mysqli->__construct()
+#1 /home/y8q8w74i/public_html/tutoring/lucie/index.php(3): require_once('/home/y8q8w74i/...')
+#2 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/settings.php on line 6
+[06-May-2024 01:35:16 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /home/y8q8w74i/public_html/tutoring/lucie/settings.php:6
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/settings.php(6): mysqli->__construct()
+#1 /home/y8q8w74i/public_html/tutoring/lucie/index.php(3): require_once('/home/y8q8w74i/...')
+#2 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/settings.php on line 6
+[06-May-2024 01:36:12 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /home/y8q8w74i/public_html/tutoring/lucie/settings.php:6
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/settings.php(6): mysqli->__construct()
+#1 /home/y8q8w74i/public_html/tutoring/lucie/index.php(3): require_once('/home/y8q8w74i/...')
+#2 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/settings.php on line 6
+[06-May-2024 01:36:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /home/y8q8w74i/public_html/tutoring/lucie/settings.php:6
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/settings.php(6): mysqli->__construct()
+#1 /home/y8q8w74i/public_html/tutoring/lucie/index.php(3): require_once('/home/y8q8w74i/...')
+#2 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/settings.php on line 6
+[06-May-2024 01:43:43 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'y8q8w74i_goldencare'@'localhost' to database 'goldencare' in /home/y8q8w74i/public_html/tutoring/lucie/settings.php:6
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/settings.php(6): mysqli->__construct()
+#1 /home/y8q8w74i/public_html/tutoring/lucie/index.php(3): require_once('/home/y8q8w74i/...')
+#2 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/settings.php on line 6
+[06-May-2024 01:43:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'y8q8w74i_goldencare'@'localhost' to database 'goldencare' in /home/y8q8w74i/public_html/tutoring/lucie/settings.php:6
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/settings.php(6): mysqli->__construct()
+#1 /home/y8q8w74i/public_html/tutoring/lucie/index.php(3): require_once('/home/y8q8w74i/...')
+#2 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/settings.php on line 6
+[06-May-2024 01:45:21 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'y8q8w74i_goldencare'@'localhost' to database 'goldencare' in /home/y8q8w74i/public_html/tutoring/lucie/settings.php:6
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/settings.php(6): mysqli->__construct()
+#1 /home/y8q8w74i/public_html/tutoring/lucie/about-us.php(3): require_once('/home/y8q8w74i/...')
+#2 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/settings.php on line 6
+[06-May-2024 01:45:30 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'y8q8w74i_goldencare'@'localhost' to database 'goldencare' in /home/y8q8w74i/public_html/tutoring/lucie/settings.php:6
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/settings.php(6): mysqli->__construct()
+#1 /home/y8q8w74i/public_html/tutoring/lucie/about-us.php(3): require_once('/home/y8q8w74i/...')
+#2 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/settings.php on line 6
+[06-May-2024 03:49:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'y8q8w74i_goldencare.member_login' doesn't exist in /home/y8q8w74i/public_html/tutoring/lucie/signup.php:29
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/signup.php(29): mysqli->prepare()
+#1 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/signup.php on line 29
+[06-May-2024 04:11:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'member_id' doesn't have a default value in /home/y8q8w74i/public_html/tutoring/lucie/signup.php:40
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/signup.php(40): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/signup.php on line 40
+[06-May-2024 04:13:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'member_id' doesn't have a default value in /home/y8q8w74i/public_html/tutoring/lucie/signup.php:40
+Stack trace:
+#0 /home/y8q8w74i/public_html/tutoring/lucie/signup.php(40): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/y8q8w74i/public_html/tutoring/lucie/signup.php on line 40

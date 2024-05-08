@@ -77,31 +77,31 @@
 				<div class="aside-content-wrapper">
 					<div class="aside-column-1">
 						<section>
-							<h1 class="no-margin">Why should I use Golden Care?</h1>
+							<h1>Why should I use Golden Care?</h1>
 							<p>Here at Golden Care we are dedicated to providing the smoothest seamless customer service. By using industry leading developers, we have created a service that anyone can use. We at Golden Care understand that aged care is complicated and nuanced, with different needs for each person, so we have taken the complexity out of the equation and simplified the care process, so that you can focus on the Care.</p>
 						</section>
 					</div>
 					<div class="aside-column-2">
 						<section>
-							<h1 class="no-margin">How can I get started?</h1>
+							<h1>How can I get started?</h1>
 							<p>To start providing a Golden standard of Care, simply email us with an inquiry at GoldenCare@swinburne.edu or give us a call on 123-456-7890 the process is simple and efficient!</p>
 						</section>
 					</div>
 					<div class="aside-column-3">
 						<section>
-							<h1 class="no-margin">Are there any medications this software is unsuited to support?</h1>
+							<h1>Are there any medications this software is unsuited to support?</h1>
 							<p>Any medications that rely on a physical blood test reading or similar, must be handled carefully given that the software operates on a timed and preset schedule. Medications that are regularly scheduled are suitable for use.</p>
 						</section>
 					</div>
 					<div class="aside-column-4">
 						<section>
-							<h1 class="no-margin">Where can I get training?</h1>
+							<h1>Where can I get training?</h1>
 							<p>Upon subscription to our services you will be provided with a training video demonstarating the various features and facilities our software offers. This will also be backed up by 1 on 1 support at any of our contacts if you need further explanations.</p>
 						</section>
 					</div>
 					<div class="aside-column-5">
 						<section>
-							<h1 class="no-margin">Where can I get technical support with a website issue?</h1>
+							<h1>Where can I get technical support with a website issue?</h1>
 							<p>If you discover any issues or bugs please reach out to us at GoldenCare@swinburne.edu or give us a call on 123-456-7890</p>
 						</section>
 					</div>

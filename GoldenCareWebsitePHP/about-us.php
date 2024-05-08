@@ -36,7 +36,7 @@
 						</div>
 						<div>
 							<a href="services.php">
-								<button href="./services.php">Services</button>
+								<button href="./services.php" title="Services » Golden Care">Services</button>
 							</a>
 						</div>
 						<div class="dropdown current-page">
@@ -51,12 +51,12 @@
 						</div>
 						<div>
 							<a href="inventory.php">
-								<button href="./inventory.php">Inventory</button>
+								<button href="./inventory.php" title="Inventory » Golden Care">Inventory</button>
 							</a>
 						</div>
 						<div>
 							<a href="management.php">
-								<button href="./management.php">Management</button>
+								<button href="./management.php" title="Management » Golden Care">Management</button>
 							</a>
 						</div>
 						<div id="signin">
@@ -82,7 +82,8 @@
 				<div class="main-column-1">
 					<article>
 						<h1 class="no-margin">About Us</h1>
-						<p>Golden Care is...</p>
+						<p>Welcome to Golden Care, a leading provider of innovative aged care software solutions based in Victoria, Australia. Our mission is to empower aged care providers with cutting-edge technology to streamline operations, enhance resident care, and optimize outcomes. With a deep understanding of the unique challenges facing the aged care industry, we have developed a comprehensive suite of software solutions tailored to meet the evolving needs of our clients.</p>
+						<p>At Golden Care, we are committed to revolutionizing the way aged care facilities operate by offering intuitive and customizable software that improves efficiency, transparency, and compliance. From electronic health records and medication management to scheduling and resident engagement platforms, our solutions are designed to simplify workflows and elevate the standard of care. With a dedicated team of experts who are passionate about leveraging technology to make a positive impact, Golden Care is proud to be your trusted partner in navigating the complexities of aged care management.</p>
 					</article>
 				</div>
 				<div class="main-column-2">
