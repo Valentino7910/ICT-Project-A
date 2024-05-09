@@ -365,6 +365,21 @@ div.main-column-2 {
 	padding: 0 15px 0 0;
 }
 
+/* Staff */
+.Staff main, .Staff div.main-content-wrapper {
+	background-color: unset;
+	flex-direction: column;
+	row-gap: 15px;
+	align-items: center;
+}
+.Staff div.main-column-1 {
+	background-color: #219ebc;
+}
+.Staff div.main-column-1, .Staff div.main-column-2 {
+	width: 100%;
+	padding: 0 15px;
+}
+
 /* Style text */
 p,
 p input,
@@ -640,14 +655,13 @@ html {
 	.column {
 		width: 100%;
 		display: block;
-
 	}
 }
 
 /* Add some shadows to create a card effect */
 .ID {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
+	background-color: #219ebc;
 }
 
 /* Some left and right padding inside the container */
@@ -669,14 +683,14 @@ html {
 	display: inline-block;
 	padding: 8px;
 	color: white;
-	background-color: #8ECAE6;
+	background-color: #fb8500;
 	text-align: center;
 	cursor: pointer;
 	width: 100%;
 }
 
 .button:hover {
-	background-color: #FB8500;
+	background-color: #ffb703;
 }
 
 
