@@ -79,23 +79,23 @@ if (isset($_POST["submit"])) {
 </head>
 
 <body>
-	<div class="page-container home">
+	<div class="page-container login">
 		<header>
 			<div class="header-content-wrapper">
 				<div class="website-title-wrapper">
-					<a class="website-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png"
+					<a class="website-title logo" href="./index.php"><img src="./images/Golden_Care_logo_white.png"
 							alt="Golden Care"></a>
 				</div>
 				<div class="navigation-wrapper">
 					<nav>
 						<div>
-							<a href="./index.php" title="Home">
-								<button href="./index.php">Home</button>
+							<a href="index.php" title="Home">
+								<button>Home</button>
 							</a>
 						</div>
 						<div>
 							<a href="services.php" title="Services » Golden Care">
-								<button href="./services.php">Services</button>
+								<button>Services</button>
 							</a>
 						</div>
 						<div class="dropdown">
@@ -103,22 +103,22 @@ if (isset($_POST["submit"])) {
 								<button>About Us</button>
 							</a>
 							<div class="dropdown-content about-us">
-								<a href="./about-us.php" title="About Us » Golden Care">About Us</a>
-								<a href="./faq.php" title="FAQ » Golden Care">FAQ</a>
-								<a href="./Staff.php" title="Staff » Golden Care">Staff</a>
+								<a href="about-us.php" title="About Us » Golden Care">About Us</a>
+								<a href="faq.php" title="FAQ » Golden Care">FAQ</a>
+								<a href="Staff.php" title="Staff » Golden Care">Staff</a>
 							</div>
 						</div>
 						<div>
                             <a href="inventory.php" title="Inventory » Golden Care">
-                            	<button href="./inventory.php">Inventory</button>
+                            	<button>Inventory</button>
                             </a>
 						</div>
 						<div>
 							<a href="management.php" title="Management » Golden Care">
-								<button href="./management.php">Management</button>
+								<button>Management</button>
 							</a>
 						</div>
-						<div id="signin">
+						<div id="signin" class="current-page">
 							<?php if (!empty($_SESSION['username'])): ?>
 								<div class="user-info-dropdown">
 									<button onclick="toggleDropdown()">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?> ▼</button>
@@ -128,7 +128,7 @@ if (isset($_POST["submit"])) {
 									</ul>
 								</div>
 							<?php else: ?>
-								<a href="login.php" class="nav-link"><button>Sign In / Up</button></a>
+								<a href="login.php" class="nav-link" title="Sign In / Up » Golden Care"><button>Sign In / Up</button></a>
 							<?php endif; ?>
 						</div>
 					</nav>
@@ -139,7 +139,7 @@ if (isset($_POST["submit"])) {
 			<div class="main-content-wrapper">
 				<div class="main-column-1">
                     <div class="container center">
-                        <h1 class="text-center">Sign In</h1>
+                        <h1>Sign In</h1>
                         <form method="post" action="login.php" class="mt-4">
                             <div class="form-group">
                                 <label for="username">Username</label>
@@ -173,7 +173,6 @@ if (isset($_POST["submit"])) {
                             <a href="signup.php" class="btn btn-primary">Sign Up</a>
                         </div>
                     </div>
-                    </div>
 				</div>
 			</div>
 		</main>
@@ -183,7 +182,7 @@ if (isset($_POST["submit"])) {
 				</div>
 				<div class="footer-bottom-wrapper">
 					<div class="footer-bottom-left-wrapper">
-						<a class="footer-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png"
+						<a class="footer-title logo" href="./index.php"><img src="./images/Golden_Care_logo_white.png"
 								alt="Golden Care"></a>
 					</div>
 					<div class="footer-bottom-centre-wrapper">

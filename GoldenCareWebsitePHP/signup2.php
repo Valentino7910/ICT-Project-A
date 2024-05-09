@@ -56,53 +56,58 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="description" content="Welcome to the home page of Golden Care.">
-	<title>Golden Care</title>
+	<title>Golden Care » Golden Care</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link type="text/css" rel="stylesheet" href="./style/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="./style/second.css">
 </head>
 
 <body>
-	<div class="page-container home">
+	<div class="page-container signup2">
 		<header>
 			<div class="header-content-wrapper">
 				<div class="website-title-wrapper">
-					<a class="website-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png"
-							alt="Golden Care"></a>
+					<a class="website-title logo" href="./index.php">
+						<img src="./images/Golden_Care_logo_white.png" alt="Golden Care">
+					</a>
 				</div>
 				<div class="navigation-wrapper">
 					<nav>
 						<div>
-							<a href="./index.php" title="Home">
-								<button href="./index.php">Home</button>
+							<a href="index.php" title="Home">
+								<button>Home</button>
 							</a>
 						</div>
 						<div>
-							<a href="services.php"><button href="./services.php">Services</button></a>
+							<a href="services.php" title="Services » Golden Care">
+								<button>Services</button>
+							</a>
 						</div>
 						<div class="dropdown">
 							<a title="About Us">
 								<button>About Us</button>
 							</a>
-							<div class="dropdown-content services-and-facilities">
-							
-								<a href="./faq.php" title="FAQ » Golden Care">FAQ</a>
-								<a href="./Staff.php" title="Staff » Golden Care">Staff</a>
+							<div class="dropdown-content about-us">
+								<a href="about-us.php" title="About Us » Golden Care">About Us</a>
+								<a href="faq.php" title="FAQ » Golden Care">FAQ</a>
+								<a href="Staff.php" title="Staff » Golden Care">Staff</a>
 							</div>
 						</div>
 						<div>
-                            <a href="inventory.php"><button href="./inventory.php">Inventory</button></a>
+                            <a href="inventory.php" title="Inventory » Golden Care">
+                            	<button>Inventory</button>
+                            </a>
 						</div>
 						<div>
-							<a href="management.php"><button href="./management.php">Management</button></a>
+							<a href="management.php" title="Management » Golden Care">
+								<button>Management</button>
+							</a>
 						</div>
-						<div id="signin">
+						<div id="signin" class="current-page">
 							<?php if (!empty($_SESSION['username'])): ?>
 								<div class="user-info-dropdown">
 									<button onclick="toggleDropdown()">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?> ▼</button>
@@ -112,7 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 									</ul>
 								</div>
 							<?php else: ?>
-								<a href="login.php" class="nav-link"><button>Sign In / Up</button></a>
+								<a href="login.php" class="nav-link" title="Sign In / Up » Golden Care"><button>Sign In / Up</button></a>
 							<?php endif; ?>
 						</div>
 					</nav>
@@ -184,7 +189,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				</div>
 				<div class="footer-bottom-wrapper">
 					<div class="footer-bottom-left-wrapper">
-						<a class="footer-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png"
+						<a class="footer-title logo" href="./index.php"><img src="./images/Golden_Care_logo_white.png"
 								alt="Golden Care"></a>
 					</div>
 					<div class="footer-bottom-centre-wrapper">

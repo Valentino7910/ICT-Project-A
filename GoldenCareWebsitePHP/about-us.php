@@ -25,18 +25,18 @@
 		<header>
 			<div class="header-content-wrapper">
 				<div class="website-title-wrapper">
-					<a class="website-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png" alt="Golden Care"></a>
+					<a class="website-title logo" href="./index.php"><img src="./images/Golden_Care_logo_white.png" alt="Golden Care"></a>
 				</div>
 				<div class="navigation-wrapper">
 					<nav>
 						<div>
 							<a href="index.php" title="Home">
-								<button href="./index.php">Home</button>
+								<button>Home</button>
 							</a>
 						</div>
 						<div>
-							<a href="services.php">
-								<button href="./services.php" title="Services » Golden Care">Services</button>
+							<a href="services.php" title="Services » Golden Care">
+								<button>Services</button>
 							</a>
 						</div>
 						<div class="dropdown current-page">
@@ -44,19 +44,19 @@
 								<button>About Us</button>
 							</a>
 							<div class="dropdown-content about-us">
-								<a class="current-page" href="./about-us.php" title="About Us » Golden Care">About Us</a>
-								<a href="./faq.php" title="FAQ » Golden Care">FAQ</a>
-								<a href="./Staff.php" title="Staff » Golden Care">Staff</a>
+								<a class=".current-page" href="about-us.php" title="About Us » Golden Care">About Us</a>
+								<a href="faq.php" title="FAQ » Golden Care">FAQ</a>
+								<a href="Staff.php" title="Staff » Golden Care">Staff</a>
 							</div>
 						</div>
 						<div>
 							<a href="inventory.php">
-								<button href="./inventory.php" title="Inventory » Golden Care">Inventory</button>
+								<button title="Inventory » Golden Care">Inventory</button>
 							</a>
 						</div>
 						<div>
 							<a href="management.php">
-								<button href="./management.php" title="Management » Golden Care">Management</button>
+								<button title="Management » Golden Care">Management</button>
 							</a>
 						</div>
 						<div id="signin">
@@ -69,7 +69,7 @@
 									</ul>
 								</div>
 							<?php else: ?>
-								<a href="login.php" class="nav-link"><button>Sign In / Up</button></a>
+								<a href="login.php" class="nav-link" title="Sign In / Up » Golden Care"><button>Sign In / Up</button></a>
 							<?php endif; ?>
 						</div>
 						
@@ -81,7 +81,7 @@
 			<div class="main-content-wrapper">
 				<div class="main-column-1">
 					<article>
-						<h1 class="no-margin">About Us</h1>
+						<h1>About Us</h1>
 						<p>Welcome to Golden Care, a leading provider of innovative aged care software solutions based in Victoria, Australia. Our mission is to empower aged care providers with cutting-edge technology to streamline operations, enhance resident care, and optimize outcomes. With a deep understanding of the unique challenges facing the aged care industry, we have developed a comprehensive suite of software solutions tailored to meet the evolving needs of our clients.</p>
 						<p>At Golden Care, we are committed to revolutionizing the way aged care facilities operate by offering intuitive and customizable software that improves efficiency, transparency, and compliance. From electronic health records and medication management to scheduling and resident engagement platforms, our solutions are designed to simplify workflows and elevate the standard of care. With a dedicated team of experts who are passionate about leveraging technology to make a positive impact, Golden Care is proud to be your trusted partner in navigating the complexities of aged care management.</p>
 					</article>
@@ -96,7 +96,7 @@
 				</div>
 				<div class="footer-bottom-wrapper">
 					<div class="footer-bottom-left-wrapper">
-						<a class="footer-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png"
+						<a class="footer-title logo" href="./index.php"><img src="./images/Golden_Care_logo_white.png"
 								alt="Golden Care"></a>
 					</div>
 					<div class="footer-bottom-centre-wrapper">

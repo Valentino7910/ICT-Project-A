@@ -73,7 +73,7 @@
         }
 
         .button:hover {
-            background-color: #555;
+            background-color: #ffb703;
         }
 
 		a {
@@ -87,34 +87,40 @@
 		<header>
 			<div class="header-content-wrapper">
 				<div class="website-title-wrapper">
-					<a class="website-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png"
+					<a class="website-title logo" href="./index.php"><img src="./images/Golden_Care_logo_white.png"
 							alt="Golden Care"></a>
 				</div>
 				<div class="navigation-wrapper">
 					<nav>
 						<div>
-							<a href="./index.php" title="Home">
-								<button href="./index.php">Home</button>
+							<a href="index.php" title="Home">
+								<button>Home</button>
 							</a>
 						</div>
 						<div class="current-page">
-							<a href="services.php"><button href="./services.php">Services</button></a>
+							<a href="services.php" title="Services » Golden Care">
+								<button>Services</button>
+							</a>
 						</div>
 						<div class="dropdown">
 							<a title="About Us">
 								<button>About Us</button>
 							</a>
 							<div class="dropdown-content about-us">
-								<a href="./about-us.php" title="About Us » Golden Care">About Us</a>
-								<a href="./faq.php" title="FAQ » Golden Care">FAQ</a>
-								<a href="./Staff.php" title="Staff » Golden Care">Staff</a>
+								<a href="about-us.php" title="About Us » Golden Care">About Us</a>
+								<a href="faq.php" title="FAQ » Golden Care">FAQ</a>
+								<a href="Staff.php" title="Staff » Golden Care">Staff</a>
 							</div>
 						</div>
 						<div>
-							<a href="inventory.php"><button href="./inventory.php">Inventory</button></a>
+							<a href="inventory.php" title="Inventory » Golden Care">
+								<button>Inventory</button>
+							</a>
 						</div>
 						<div>
-							<a href="management.php"><button href="./management.php">Management</button></a>
+							<a href="management.php" title="Management » Golden Care">
+								<button>Management</button>
+							</a>
 						</div>
 						<div id="signin">
 							<?php if (!empty($_SESSION['username'])): ?>
@@ -126,7 +132,7 @@
 									</ul>
 								</div>
 							<?php else: ?>
-								<a href="login.php" class="nav-link"><button>Sign In / Up</button></a>
+								<a href="login.php" class="nav-link" title="Sign In / Up » Golden Care"><button>Sign In / Up</button></a>
 							<?php endif; ?>
 						</div>
 					</nav>
@@ -168,7 +174,7 @@
 				</div>
 				<div class="footer-bottom-wrapper">
 					<div class="footer-bottom-left-wrapper">
-						<a class="footer-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png"
+						<a class="footer-title logo" href="./index.php"><img src="./images/Golden_Care_logo_white.png"
 								alt="Golden Care"></a>
 					</div>
 					<div class="footer-bottom-centre-wrapper">

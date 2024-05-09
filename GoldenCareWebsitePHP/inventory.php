@@ -18,31 +18,28 @@
 	<link type="text/css" rel="stylesheet" href="./style/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-        
-		href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="./style/second.css">
 </head>
 
 <body>
-	<div class="page-container home">
+	<div class="page-container inventory">
 		<header>
 			<div class="header-content-wrapper">
 				<div class="website-title-wrapper">
-					<a class="website-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png"
+					<a class="website-title logo" href="./index.php"><img src="./images/Golden_Care_logo_white.png"
 							alt="Golden Care"></a>
 				</div>
 				<div class="navigation-wrapper">
 					<nav>
 						<div>
-							<a href="./index.php" title="Home">
-								<button href="./index.php">Home</button>
+							<a href="index.php" title="Home">
+								<button>Home</button>
 							</a>
 						</div>
 						<div>
 							<a href="services.php" title="Services » Golden Care">
-								<button href="./services.php">Services</button>
+								<button>Services</button>
 							</a>
 						</div>
 						<div class="dropdown">
@@ -50,19 +47,19 @@
 								<button>About Us</button>
 							</a>
 							<div class="dropdown-content about-us">
-								<a href="./about-us.php" title="About Us » Golden Care">About Us</a>
-								<a href="./faq.php" title="FAQ » Golden Care">FAQ</a>
-								<a href="./Staff.php" title="Staff » Golden Care">Staff</a>
+								<a href="about-us.php" title="About Us » Golden Care">About Us</a>
+								<a href="faq.php" title="FAQ » Golden Care">FAQ</a>
+								<a href="Staff.php" title="Staff » Golden Care">Staff</a>
 							</div>
 						</div>
 						<div  class="current-page">
                             <a href="inventory.php" title="Inventory » Golden Care">
-                            	<button href="./inventory.php">Inventory</button>
+                            	<button>Inventory</button>
                             </a>
 						</div>
 						<div>
 							<a href="management.php" title="Management » Golden Care">
-								<button href="./management.php">Management</button>
+								<button>Management</button>
 							</a>
 						</div>
 						<div id="signin">
@@ -75,7 +72,7 @@
 									</ul>
 								</div>
 							<?php else: ?>
-								<a href="login.php" class="nav-link"><button>Sign In / Up</button></a>
+								<a href="login.php" class="nav-link" title="Sign In / Up » Golden Care"><button>Sign In / Up</button></a>
 							<?php endif; ?>
 						</div>
 					</nav>
@@ -179,8 +176,9 @@
 				</div>
 				<div class="footer-bottom-wrapper">
 					<div class="footer-bottom-left-wrapper">
-						<a class="footer-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png"
-								alt="Golden Care"></a>
+						<a class="footer-title logo" href="./index.php">
+							<img src="./images/Golden_Care_logo_white.png" alt="Golden Care">
+						</a>
 					</div>
 					<div class="footer-bottom-centre-wrapper">
 						<p>123-456-7890</p>

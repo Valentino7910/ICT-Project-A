@@ -19,6 +19,11 @@
     <link type="text/css" rel="stylesheet" href="./style/second.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        footer p {
+        	margin: 0;
+        	line-height: normal;
+        }
+
         .content {
             position: relative;
             color: white;
@@ -30,6 +35,7 @@
 			z-index: 500;
 			flex-grow: 1;
         }
+
         .content::before {
             content: '';
             position: absolute;
@@ -40,14 +46,17 @@
             background-color: rgba(0, 0, 0, 0.3);
             z-index: 2;
         }
+
         .container, .row, .col-md-6 {
             padding: 10px; /* Uniform padding for simplicity */
         }
+
         video, iframe {
             width: 100%;
             height: auto;
             z-index: 3;
         }
+
 		.dropdown {
 			z-index: 1000;  /* High z-index to ensure it appears on top */
 		}
@@ -61,19 +70,22 @@
 			position: relative;
 			z-index: 600;  /* Lower than the dropdown */
 		}
+
 		html, body {
 		height: 100%; /* Ensures the minimum height is the full viewport height */
 		margin: 0; /* Removes default margin */
 		padding: 0; /* Removes default padding */
-	}
+		}
+
 		.page-container {
 		min-height: 100%; /* Ensures it at least covers the viewport */
 		display: flex;
 		flex-direction: column; /* Stacks children vertically */
-	}
-	a {
+		}
+
+		a {
 		color: #fff !important;
-	}
+		}
     </style>
 </head>
 
@@ -82,19 +94,19 @@
 		<header>
 			<div class="header-content-wrapper">
 				<div class="website-title-wrapper">
-					<a class="website-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png"
+					<a class="website-title logo" href="./index.php"><img src="./images/Golden_Care_logo_white.png"
 							alt="Golden Care"></a>
 				</div>
 				<div class="navigation-wrapper">
 					<nav>
 						<div class="current-page">
-							<a href="./index.php" title="Home">
-								<button href="./index.php">Home</button>
+							<a href="index.php" title="Home">
+								<button>Home</button>
 							</a>
 						</div>
 						<div>
 							<a href="services.php" title="Services » Golden Care">
-								<button href="./services.php">Services</button>
+								<button>Services</button>
 							</a>
 						</div>
 						<div class="dropdown">
@@ -102,19 +114,19 @@
 								<button>About Us</button>
 							</a>
 							<div class="dropdown-content about-us">
-								<a href="./about-us.php" title="About Us » Golden Care">About Us</a>
-								<a href="./faq.php" title="FAQ » Golden Care">FAQ</a>
-								<a href="./Staff.php" title="Staff » Golden Care">Staff</a>
+								<a href="about-us.php" title="About Us » Golden Care">About Us</a>
+								<a href="faq.php" title="FAQ » Golden Care">FAQ</a>
+								<a href="Staff.php" title="Staff » Golden Care">Staff</a>
 							</div>
 						</div>
 						<div>
-							<a href="inventory.php">
-								<button href="./inventory.php">Inventory</button>
+							<a href="inventory.php" title="Inventory » Golden Care">
+								<button>Inventory</button>
 							</a>
 						</div>
 						<div>
-							<a href="management.php">
-								<button href="./management.php">Management</button>
+							<a href="management.php" title="Management » Golden Care">
+								<button>Management</button>
 							</a>
 						</div>
 						<div id="signin">
@@ -127,7 +139,7 @@
 									</ul>
 								</div>
 							<?php else: ?>
-								<a href="login.php" class="nav-link"><button>Sign In / Up</button></a>
+								<a href="login.php" class="nav-link" title="Sign In / Up » Golden Care"><button>Sign In / Up</button></a>
 							<?php endif; ?>
 						</div>
 					</nav>
@@ -154,7 +166,7 @@
 				</div>
 				<div class="footer-bottom-wrapper">
 					<div class="footer-bottom-left-wrapper">
-						<a class="footer-title logo" href="./home.html"><img src="./images/Golden_Care_logo_white.png"
+						<a class="footer-title logo" href="./index.php"><img src="./images/Golden_Care_logo_white.png"
 								alt="Golden Care"></a>
 					</div>
 					<div class="footer-bottom-centre-wrapper">
