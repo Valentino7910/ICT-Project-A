@@ -71,10 +71,7 @@ div.footer-content-wrapper {
 /* Responsive layout once content equals screen size */
 @media screen and (min-width: 1200px) {
 
-	div.header-content-wrapper,
-	div.main-content-wrapper,
-	div.aside-content-wrapper,
-	div.footer-content-wrapper {
+	div.header-content-wrapper, div.main-content-wrapper, div.aside-content-wrapper, div.footer-content-wrapper {
 		width: 1200px;
 	}
 	.faq aside section {
@@ -84,9 +81,7 @@ div.footer-content-wrapper {
 
 @media screen and (min-width: 1500px) {
 
-	main,
-	div.aside-content-wrapper,
-	div.footer-content-wrapper {
+	main, div.aside-content-wrapper, div.footer-content-wrapper {
 		margin-right: 10vw;
 		margin-left: 10vw;
 	}
@@ -95,8 +90,7 @@ div.footer-content-wrapper {
 		background-color: #219ebc;
 	}
 
-	div.aside-content-wrapper,
-	div.footer-content-wrapper {
+	div.aside-content-wrapper, div.footer-content-wrapper {
 		width: 100% !important;
 	}
 
@@ -143,9 +137,7 @@ div.footer-content-wrapper {
 		align-items: center !important;
 	}
 
-	div.footer-bottom-left-wrapper,
-	div.footer-bottom-centre-wrapper,
-	div.footer-bottom-right-wrapper {
+	div.footer-bottom-left-wrapper, div.footer-bottom-centre-wrapper, div.footer-bottom-right-wrapper {
 		width: auto !important;
 	}
 
@@ -153,8 +145,7 @@ div.footer-content-wrapper {
 		text-align: center;
 	}
 
-	div.footer-bottom-left-wrapper p,
-	div.footer-bottom-centre-wrapper p {
+	div.footer-bottom-left-wrapper p, div.footer-bottom-centre-wrapper p {
 		margin: 0 0 1em 0;
 	}
 }
@@ -288,8 +279,7 @@ nav div:not(.dropdown-content):last-of-type {
 }
 
 /* Change colour on hover/mouse-over */
-nav div:not(.dropdown-content):hover,
-nav div:not(.dropdown-content):hover button {
+nav div:not(.dropdown-content):hover, nav div:not(.dropdown-content):hover button {
 	background-color: #6ba4be;
 	/* Purple background color */
 	color: #ffb703;
@@ -366,44 +356,27 @@ div.main-column-2 {
 }
 
 /* Staff */
-.Staff main, .Staff div.main-content-wrapper {
+.services main, .Staff main, .services div.main-content-wrapper, .Staff div.main-content-wrapper {
 	background-color: unset;
 	flex-direction: column;
 	row-gap: 15px;
 	align-items: center;
 }
-.Staff div.main-column-1 {
+.services div.main-column-1, .Staff div.main-column-1 {
 	background-color: #219ebc;
 }
-.Staff div.main-column-1, .Staff div.main-column-2 {
+.services div.main-column-1, .Staff div.main-column-1, .services div.main-column-2, .Staff div.main-column-2 {
 	width: 100%;
 	padding: 0 15px;
 }
 
 /* Style text */
-p,
-p input,
-button,
-a,
-td,
-th,
-li,
-.images,
-h1,
-h2,
-h3 {
+p, p input, button, a, td, th, li, .images, h1, h2, h3 {
 	color: #fff;
-	font-family: "Lora", serif;
+	font-family: "Lora", serif !important;
 }
 
-p,
-p input,
-button,
-a,
-td,
-th,
-li,
-.images {
+p, p input, button, a, td, th, li, .images {
 	font-size: 1em;
 	margin: 0;
 	font-style: normal;
@@ -444,8 +417,7 @@ h3 {
 }
 
 /* Style aside content */
-aside p,
-aside li {
+aside p, aside li {
 	margin: 0 0 0.5em 0;
 }
 
@@ -487,37 +459,6 @@ div.aside-content-wrapper div {
 	width: auto !important;
 }
 
-/* Style uni timetable */
-#uni-timetable {
-	width: 100%;
-	border-collapse: collapse;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #000;
-}
-
-#uni-timetable td,
-#uni-timetable th {
-	padding: 0 5px 0 5px;
-	border-right: 1px solid #000;
-}
-
-#uni-timetable tr:nth-child(4),
-#uni-timetable tr:nth-child(6),
-#uni-timetable tr:nth-child(7) {
-	border-bottom: 1px solid #000;
-}
-
-#uni-timetable th {
-	padding: 0 5px 0 5px;
-	border-bottom: 1px solid #000;
-}
-
-/* Style book survey form */
-#book-survey-table {
-	width: 100%;
-}
-
 /* Style checkbox input */
 input[type=checkbox] {
 	position: relative;
@@ -530,8 +471,7 @@ input[type=checkbox] {
 	bottom: 2px;
 }
 
-input[type=checkbox]:checked:before,
-input[type=radio]:checked:before {
+input[type=checkbox]:checked:before, input[type=radio]:checked:before {
 	transform: scale(1);
 	opacity: 1;
 }
@@ -573,8 +513,7 @@ input.reset-button {
 		/* Border colour white */
 }
 
-input.submit-button:hover,
-input.reset-button:hover {
+input.submit-button:hover, input.reset-button:hover {
 	background-color: #ffb703;
 	/* Purple background color */
 	color: #000;
@@ -609,6 +548,11 @@ div.footer-bottom-wrapper {
 /* Style footer bottom */
 
 /* Style footer title image */
+footer p {
+	margin: 0;
+	line-height: normal;
+}
+
 a.footer-title img {
 	width: 10em;
 }
@@ -636,9 +580,7 @@ html {
 	box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
 	box-sizing: inherit;
 }
 
@@ -670,8 +612,7 @@ html {
 }
 
 /* Clear floats */
-.container::after,
-.Staff::after {
+.container::after, .Staff::after {
 	content: "";
 	clear: both;
 	display: table;
@@ -692,7 +633,6 @@ html {
 .button:hover {
 	background-color: #ffb703;
 }
-
 
 .role {
 	font-style: italic;

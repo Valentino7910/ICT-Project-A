@@ -43,7 +43,7 @@ header {
 }
 
 #signin .dropdown-content li {
-    color: black;
+    color: #000 !important;
     /* Text color */
     padding: 10px 20px;
     /* Padding for touch targets */
@@ -54,7 +54,7 @@ header {
 }
 
 #signin .dropdown-content li a {
-    color: black;
+    color: #000 !important;
     /* Ensures link color is consistent */
     text-decoration: none;
     /* No underline */
