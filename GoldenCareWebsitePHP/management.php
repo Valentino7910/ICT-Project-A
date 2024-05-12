@@ -82,17 +82,17 @@
 			<main>
 				<section>
 				<div class="card">
-					<img src="https://static.wixstatic.com/media/7992be_a24e13154b554573832878cd22c09500~mv2.jpg/v1/crop/x_44,y_0,w_935,h_1024/fill/w_590,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Inventory.jpg" alt="Inventory">
+					<img src="images/boxes.jpg" alt="Inventory">
 					<h2>Inventory</h2>
 					<a href="inventory.php"><button href="inventory.php">Edit</button></a>
 				</div>
 				<div class="card">
-					<img src="https://static.wixstatic.com/media/7992be_eadf02d2b17d4872a81df90b9df21d8f~mv2.jpg/v1/crop/x_44,y_0,w_935,h_1024/fill/w_590,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Staff%20management.jpg" alt="Staff Management">
+					<img src="images/staff.png" alt="Staff Management">
 					<h2>Staff Management</h2>
 					<a href="Staff.php"><button href="Staff.php">Edit</button></a>
 				</div>
 				<div class="card">
-					<img src="https://static.wixstatic.com/media/7992be_0c32e56a3dfe44e1a0a89b6acd39c743~mv2.jpg/v1/crop/x_44,y_0,w_935,h_1024/fill/w_590,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Bookings.jpg" alt="Services">
+					<img src="images/Bookings.png" alt="Services">
 					<h2>Services</h2>
 					<button>Edit</button>
 				</div>
