@@ -123,6 +123,16 @@ if (isset($_POST["submit"])) {
 										<ul id="userDropdown" class="dropdown-content" style="display: none;">
 											<!--<li>Role: <span><?php echo htmlspecialchars(ucfirst($_SESSION['role'])); ?></span></li>-->
 											<li><a href="logout.php">Logout</a></li>
+											<?php
+											if ($_SESSION['role'] === 'patient') {
+														echo "<li><a href='memberprofile.php'>Profile</a></li>";
+														}; 
+										?>
+										<?php
+												if ($_SESSION['role'] === 'patient') {
+															echo "<li><a href='memberbooking.php'>Bookings</a></li>";
+															}; 
+										?>
 										</ul>
 									</div>
 								<?php else: ?>

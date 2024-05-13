@@ -61,6 +61,16 @@
 									<ul id="userDropdown" class="dropdown-content" style="display: none;">
 										<!--<li>Role: <span><?php echo htmlspecialchars(ucfirst($_SESSION['role'])); ?></span></li>-->
 										<li><a href="logout.php">Logout</a></li>
+										<?php
+											if ($_SESSION['role'] === 'patient') {
+														echo "<li><a href='memberprofile.php'>Profile</a></li>";
+														}; 
+										?>
+										<?php
+												if ($_SESSION['role'] === 'patient') {
+															echo "<li><a href='memberbooking.php'>Bookings</a></li>";
+															}; 
+										?>
 									</ul>
 								</div>
 							<?php else: ?>
@@ -82,9 +92,13 @@
 								<div class="ID">
 									<img src="images/Animated Nerd.png" alt="Byron Dallas" style="width: 100%">
 									<div class="container">
-										<h2>Byron Dallas</h2>
+									<h2>Byron Dallas</h2>
 										<p class="role">Administrator</p>
-										<p><button class="button">Contact</button></p>
+										<p>Equipped from Swinburne University and taken the role of overseeing and evaluating the website of Golden Care, Byron Dallas has been enthusiatic in the Administrator role 
+											and presented many ideas that could benefit to the GoldenCare website </p>
+										<p>Email:BDallas@Goldencare.com</p>
+										<a href="mailto:BDallas@Goldencare.com" button class="button">Contact Us</a>
+
 									</div>
 								</div>
 							</div>
@@ -92,29 +106,13 @@
 								<div class="ID">
 									<img src="images/Male doctor.png" alt="Rick Jones" style="width:100%">
 									<div class="container">
-										<h2>Rick Jones</h2>
+										
+									<h2>Rick Jones</h2>
 										<p class="role">Doctor</p>
-										<p><button class="button">Contact</button></p>
-									</div>
-								</div>
-							</div>
-							<div class="column">
-								<div class="ID">
-									<img src="images/Receptionist.png" alt="Tess Brown" style="width:100%">
-									<div class="container">
-										<h2>Tess Brown</h2>
-										<p class="role">Front staff</p>
-										<p><button class="button">Contact</button></p>
-									</div>
-								</div>
-							</div>
-							<div class="column">
-								<div class="ID">
-									<img src="images/Caretaker.png" alt="Lisa Rose" style="width:100%">
-									<div class="container">
-										<h2>Lisa Rose</h2>
-										<p class="role">Caretaker</p>
-										<p><button class="button">Contact</button></p>
+										<p>Coming from a family background of doctors and completed a Doctor of Medicine degree at the University of Melbourne, Rick Jones has employed his skills and knowledge to Golden Care for 10 years 
+										and has assisted us to the best. </p>
+										<p>Email:Rjones@GoldenCare.com</p>
+										<a href="mailto:Rjone@GoldenCare.com" button class="button">Contact Us</a>
 									</div>
 								</div>
 							</div>
@@ -122,9 +120,51 @@
 								<div class="ID">
 									<img src="images/Male caretaker.png" alt="Kevin Nye" style="width:100%">
 									<div class="container">
-										<h2>Kevin Nye</h2>
+									<h2>Kevin Nye</h2>
 										<p class="role">Caretaker</p>
-										<p><button class="button">Contact</button></p>
+										<p>An kind and enthusiatic person who has work with Golden Care for 5 years, he willingness to assist the elderly have been crucial to ensuring customer satisfaction as well ensuring they have a good time, 
+										a patient and understanding person, willing to listen to others and assist 
+										</p>
+										<p>Email:KNye@GoldenCare.com</p>
+										<a href="mailto:KNye@GoldenCare.com" button class="button">Contact us</a>
+									</div>
+								</div>
+							</div>
+							<div class="column">
+								<div class="ID">
+									<img src="images/Caretaker.png" alt="Lisa Rose" style="width:100%">
+									<div class="container">
+									<h2>Lisa Rose</h2>
+										<p class="role">Caretaker</p>
+										<p>Lisa Rose has been a caretaker for GoldenCare for 15 years, her kindness and cheerfulness has highly influenced many clients alongside inspiring our fellow staff members to work even harder, 
+										she acts as a sort of team leader and role model when it comes to taking care of patients.
+										</p>
+										<p>Email:LRose@GoldenCare.com</p>
+										<a href="mailto:LRose@GoldenCare.com" button class="button">Contact us</a>
+
+
+
+
+									</div>
+								</div>
+							</div>
+							
+							<div class="column">
+								<div class="ID">
+									<img src="images/Receptionist.png" alt="Tess Brown" style="width:100%">
+									<div class="container">
+									<h2>Tess Brown</h2>
+										<p class="role">Front staff</p>
+										<br>
+										<p>An mature and kind member of GoldenCare's staff, her professional skills in scheduling appointments and assisting patient flow has been crucial to maintaining a schedule 
+										</p>
+										<br>
+										<br>
+										
+										<p>Email:TBrown@GoldenCare.com</p>
+										<a href="mailto:TBrown@GoldenCare.com" button class="button">Contact us<a>
+
+
 									</div>
 								</div>
 							</div>
@@ -132,9 +172,12 @@
 								<div class="ID">
 									<img src="images/young male caretaker.png" alt="Alex Young" style="width:100%">
 									<div class="container">
-										<h2>Alex Young</h2>
+									<h2>Alex Young</h2>
 										<p class="role">Caretaker</p>
-										<p><button class="button">Contact</button></p>
+										<p>A young and influential worker, despite his disability, it has not lower Alex's drive to help the elderly, his kind hearted nature and goal to prove himself has touched the hearts of many clients and staff, 
+										he is known to have a positive outlook in everything and willingly makes the best of everything</p>
+										<p>Email:AYoung@GoldenCare.com</p>
+										<a href="mailto:AYoung@GoldenCare.com" button class="button">Contact us</a>
 									</div>
 								</div>
 							</div>

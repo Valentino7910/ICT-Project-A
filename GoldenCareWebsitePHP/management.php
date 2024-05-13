@@ -66,6 +66,16 @@
 										<ul id="userDropdown" class="dropdown-content" style="display: none;">
 											<!--<li>Role: <span><?php echo htmlspecialchars(ucfirst($_SESSION['role'])); ?></span></li>-->
 											<li><a href="logout.php">Logout</a></li>
+											<?php
+											if ($_SESSION['role'] === 'patient') {
+														echo "<li><a href='memberprofile.php'>Profile</a></li>";
+														}; 
+										?>
+										<?php
+												if ($_SESSION['role'] === 'patient') {
+															echo "<li><a href='memberbooking.php'>Bookings</a></li>";
+															}; 
+										?>
 										</ul>
 									</div>
 								<?php else: ?>
@@ -83,18 +93,18 @@
 				<section>
 				<div class="card">
 					<img src="images/boxes.jpg" alt="Inventory">
-					<h2>Inventory</h2>
-					<a href="inventory.php"><button href="inventory.php">Edit</button></a>
+					<h2>Member Management</h2>
+                        <a href="membermanagement.php"><button href="inventory.php">Edit</button></a>
 				</div>
 				<div class="card">
 					<img src="images/staff.png" alt="Staff Management">
-					<h2>Staff Management</h2>
-					<a href="Staff.php"><button href="Staff.php">Edit</button></a>
+					<h2>Schedule</h2>
+                    <a href="schedule.php"><button href="schedule.php">Edit</button></a>
 				</div>
 				<div class="card">
 					<img src="images/Bookings.png" alt="Services">
-					<h2>Services</h2>
-					<button>Edit</button>
+					<h2>Services Management</h2>
+                        <a href="bookingmanagement.php"><button href="bookingmanagement.php">Edit</button></a>
 				</div>
 				</section>
 			</main>

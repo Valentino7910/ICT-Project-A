@@ -127,6 +127,16 @@
 										<ul id="userDropdown" class="dropdown-content" style="display: none;">
 											<!--<li>Role: <span><?php echo htmlspecialchars(ucfirst($_SESSION['role'])); ?></span></li>-->
 											<li><a href="logout.php">Logout</a></li>
+											<?php
+											if ($_SESSION['role'] === 'patient') {
+														echo "<li><a href='memberprofile.php'>Profile</a></li>";
+														}; 
+										?>
+										<?php
+												if ($_SESSION['role'] === 'patient') {
+															echo "<li><a href='memberbooking.php'>Bookings</a></li>";
+															}; 
+										?>
 										</ul>
 									</div>
 								<?php else: ?>
@@ -145,27 +155,28 @@
 					<div class="main-column-2">
 						<div class="cards">
 							<div class="card">
-								<img src="images/telephone.jpg" alt="Consultation">
+								<img src="https://static.wixstatic.com/media/7992be_56615374de2a4c7b8e7533409880e7d8~mv2.jpg" alt="Consultation">
 								<div class="container">
-									<p><strong>Consultation</strong></p>
-									<p>30 minutes session with our staff</p>
-									<button class="button"><a href="consultation.html">Book Now</a></button>
+									<h4><b>Consultation</b></h4>
+									<p>30 minutes session with our staff for any mental health need</p>
+									
+									<button class="button" href="homecare.php"><a href="homecare.php">Book Now</a></button>
 								</div>
 							</div>
 							<div class="card">
-								<img src="images/grandma.jpg" alt="Home Care">
+								<img src="https://static.wixstatic.com/media/7992be_f036b23331ae4941aa9d99ddbf325e58~mv2.jpg" alt="Home Care">
 								<div class="container">
-									<p><strong>Home Care</strong></p>
-									<p>Context for Home Care services</p>
-									<button class="button"><a href="homecare.html">Book Now</a></button>
+									<h4><b>Home Care</b></h4>
+									<p>Home care service provides personalized assistance in individuals' homes, supporting their needs and promoting independence</p>
+									<button class="button" href="homecare.php"><a href="homecare.php">Book Now</a></button>
 								</div>
 							</div>
 							<div class="card">
-								<img src="images/waitingroom.jpg" alt="Facility">
+								<img src="https://static.wixstatic.com/media/7992be_02a2ece2b5b74390a54f3dcb4fee0b54~mv2.jpg" alt="Facility">
 								<div class="container">
-									<p><strong>Facility</strong></p>
-									<p>Context for facility services</p>
-									<button class="button"><a href="facility.html">Book Now</a></button>
+									<h4><b>Facility</b></h4>
+									<p>Booking facility services for patient with special needs.</p>
+									<button class="button" href="homecare.php"><a href="homecare.php">Book Now</a></button>
 								</div>
 							</div>
 						</div>

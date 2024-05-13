@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $security_answer2 = $_POST['security_answer2'];
 
     // Establish a database connection
+   
 
     // Check connection
     if ($conn->connect_error) {
@@ -38,20 +39,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("sssssss", $username, $password, $role, $security_question1, $security_answer1, $security_question2, $security_answer2);
 
         if ($stmt->execute()) {
-            $message = "User registered successfully! You will be redirected to the login page in 5 seconds...";
-            echo '<script>
-                    setTimeout(function() {
-                        window.location.href = "login.php";
-                    }, 5000);
-                </script>';
+            // Insert into Patients table
+            $stmt = $conn->prepare("INSERT INTO Patients (FirstName, LastName, PhoneNumber, Username) VALUES (NULL, NULL, NULL, ?)");
+            $stmt->bind_param("s", $username);
+            if ($stmt->execute()) {
+                $message = "User registered successfully! You will be redirected to the login page in 5 seconds...";
+                echo '<script>
+                        setTimeout(function() {
+                            window.location.href = "login.php";
+                        }, 5000);
+                    </script>';
+            } else {
+                $message = "Error inserting into Patients table: " . $stmt->error;
+            }
         } else {
-            $message = "Error: " . $stmt->error;
+            $message = "Error inserting into member_login: " . $stmt->error;
         }
+        $stmt->close(); // Close the prepared statement
     }
-    $stmt->close();
-    $conn->close();
+    $conn->close(); // Close the database connection
 }
 ?>
+
 
 
 
@@ -174,6 +183,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 										<ul id="userDropdown" class="dropdown-content" style="display: none;">
 											<!--<li>Role: <span><?php echo htmlspecialchars(ucfirst($_SESSION['role'])); ?></span></li>-->
 											<li><a href="logout.php">Logout</a></li>
+											<?php
+											if ($_SESSION['role'] === 'patient') {
+														echo "<li><a href='memberprofile.php'>Profile</a></li>";
+														}; 
+										?>
+										<?php
+												if ($_SESSION['role'] === 'patient') {
+															echo "<li><a href='memberbooking.php'>Bookings</a></li>";
+															}; 
+										?>
 										</ul>
 									</div>
 								<?php else: ?>
